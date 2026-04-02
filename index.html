@@ -586,7 +586,7 @@
         }
         .service-card {
             display: grid;
-            grid-template-columns: 200px 1fr auto;
+            grid-template-columns: 1fr auto;
             align-items: center;
             background: var(--white);
             border-radius: 16px;
@@ -619,23 +619,7 @@
             border-color: rgba(243, 112, 33, 0.15);
         }
         .service-card-img {
-            width: 200px;
-            height: 100%;
-            min-height: 160px;
-            overflow: hidden;
-            flex-shrink: 0;
-        }
-        .service-card-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.5s ease, filter 0.4s ease;
-            filter: sepia(60%) saturate(200%) hue-rotate(-15deg) brightness(0.9);
-        }
-        .service-card:hover .service-card-img img {
-            transform: scale(1.08);
-            filter: sepia(30%) saturate(150%) hue-rotate(-15deg) brightness(0.95);
+            display: none;
         }
         .service-card-body {
             padding: 24px 28px;
@@ -1057,8 +1041,7 @@
         @media (max-width: 1024px) {
             .hero .container { grid-template-columns: 1fr; }
             .quote-form-card { max-width: 500px; }
-            .service-card-img { width: 180px; height: 140px; }
-            .service-card { grid-template-columns: 180px 1fr auto; }
+            .service-card { grid-template-columns: 1fr auto; }
             .pest-detail .container { grid-template-columns: 1fr; }
             .process-grid { grid-template-columns: repeat(2, 1fr); }
             .process-step:not(:last-child)::after { display: none; }
@@ -1078,7 +1061,6 @@
             .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
             .stat-number { font-size: 2.6rem; }
             .service-card { grid-template-columns: 1fr; height: auto !important; }
-            .service-card-img { width: 100%; height: 180px; }
             .service-card-price { border-left: none; border-top: 1px solid rgba(0,0,0,0.06); padding: 16px 24px; }
             .service-card-price .price-amount { font-size: 1.6rem; }
             .pest-services-list { grid-template-columns: 1fr; }
