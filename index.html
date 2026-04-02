@@ -926,6 +926,50 @@
             line-height: 1.6;
         }
 
+        /* ===== PAGE-SPECIFIC TERMITE SECTION ===== */
+        .termite-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        .termite-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 32px 24px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(0,0,0,0.04);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        .termite-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 35px rgba(243, 112, 33, 0.15);
+        }
+        .termite-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f37021, #e05e10);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px;
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(243, 112, 33, 0.3);
+        }
+        .termite-icon svg { color: var(--white); }
+        .termite-card h4 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 10px;
+        }
+        .termite-card p {
+            font-size: 0.88rem;
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
         /* ===== PAGE-SPECIFIC INDUSTRIES ===== */
         .industries {
             background: var(--gray-50);
@@ -1110,6 +1154,7 @@
             .why-choose .container { grid-template-columns: 1fr; }
             .why-choose-features { grid-template-columns: 1fr 1fr; }
             .method-list { grid-template-columns: 1fr; }
+            .termite-grid { grid-template-columns: repeat(2, 1fr); }
             .footer-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
@@ -1119,11 +1164,19 @@
             .method-list { grid-template-columns: 1fr; }
             .hero h1 { font-size: 2rem; }
             .hero .container { gap: 30px; }
-            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
-            .stat-number { font-size: 2.6rem; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+            .stat-item { padding: 20px 16px; }
+            .stat-number { font-size: 2.4rem; }
+            .stat-label { font-size: 0.72rem; letter-spacing: 1px; }
             .service-card { grid-template-columns: 1fr; height: auto !important; }
-            .service-card-price { border-left: none; border-top: 1px solid rgba(0,0,0,0.06); padding: 16px 24px; }
+            .service-card-body { padding: 20px; }
+            .service-card-price { border-left: none; border-top: 1px solid rgba(0,0,0,0.06); padding: 16px 20px; display: flex; align-items: center; gap: 8px; }
+            .service-card-price .price-label { margin-bottom: 0; }
             .service-card-price .price-amount { font-size: 1.6rem; }
+            .process-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+            .process-step { padding: 24px 18px; }
+            .termite-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+            .termite-card { padding: 24px 18px; }
             .pest-services-list { grid-template-columns: 1fr; }
             .industries-grid { grid-template-columns: repeat(3, 1fr); }
             .footer-grid { grid-template-columns: 1fr; }
@@ -1146,7 +1199,23 @@
             .hero { padding: 60px 0 50px; }
             .hero-badge { font-size: 0.72rem; padding: 6px 12px; }
             .hero-description { font-size: 0.9rem; }
-            .stat-number { font-size: 2rem; }
+            .stats-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+            .stat-item { padding: 16px 12px; border-radius: 12px; }
+            .stat-number { font-size: 1.8rem; }
+            .stat-label { font-size: 0.68rem; }
+            .process-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+            .process-step { padding: 20px 14px; border-radius: 12px; }
+            .process-step h4 { font-size: 0.9rem; }
+            .process-step p { font-size: 0.8rem; }
+            .step-number { width: 44px; height: 44px; font-size: 1.1rem; }
+            .termite-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+            .termite-card { padding: 20px 14px; border-radius: 12px; }
+            .termite-card h4 { font-size: 0.92rem; }
+            .termite-card p { font-size: 0.8rem; }
+            .termite-icon { width: 48px; height: 48px; margin-bottom: 14px; }
+            .termite-icon svg { width: 22px; height: 22px; }
+            .service-card-body h3 { font-size: 1.05rem; }
+            .service-card-body p { font-size: 0.85rem; }
             .industries-grid { grid-template-columns: repeat(2, 1fr); }
             .locations-tags { gap: 8px; }
             .location-tag { padding: 8px 14px; font-size: 0.85rem; }
@@ -1879,58 +1948,60 @@
         </div>
     </section>
 
-    <!-- Wave: Process → Termites (navy/orange) -->
+    <!-- Wave: Process → Termites -->
     <div style="position: relative; z-index: 3; line-height: 0; margin-top: -1px;">
         <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="display: block; width: 100%;">
             <rect width="1440" height="80" fill="#ffffff"/>
-            <path d="M0,20 C240,70 480,10 720,45 C960,75 1200,15 1440,50 L1440,80 L0,80 Z" fill="#0f1b33"/>
-            <path d="M0,18 C240,68 480,8 720,43 C960,73 1200,13 1440,48 L1440,50 L0,20 Z" fill="#f37021" opacity="0.6"/>
+            <path d="M0,30 C240,70 720,10 1440,50 L1440,80 L0,80 Z" fill="#0f1b33"/>
         </svg>
     </div>
 
     <!-- Termite Section -->
-    <section class="services-section section-padding section-orange-tint" id="termites" aria-label="Termite prevention and treatment">
+    <section class="section-padding" id="termites" style="background: linear-gradient(135deg, #0f1b33 0%, #0a1225 100%);" aria-label="Termite prevention and treatment">
         <div class="container">
-            <div class="section-header animate-on-scroll">
-                <div class="section-label" style="justify-content: center;">Termite Specialists</div>
-                <h2>Expert Termite <span>Prevention &amp; Treatment</span></h2>
+            <div class="section-header animate-on-scroll" style="text-align: center; margin-bottom: 50px;">
+                <div class="section-label" style="color: var(--orange); justify-content: center;">Termite Specialists</div>
+                <h2 style="color: var(--white); font-size: 2.3rem; font-weight: 900;">Expert Termite <span style="color: var(--orange);">Prevention &amp; Treatment</span></h2>
+                <div style="width: 80px; height: 4px; background: linear-gradient(90deg, var(--orange), #f59e0b); border-radius: 2px; margin: 20px auto 0;"></div>
             </div>
-            <div class="services-grid" style="grid-template-columns: repeat(4, 1fr);">
-                <div class="feature-card animate-on-scroll" style="flex-direction: column; text-align: center;">
-                    <div class="feature-icon" style="margin: 0 auto 12px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <div class="termite-grid">
+                <div class="termite-card animate-on-scroll">
+                    <div class="termite-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
                     </div>
                     <h4>Termite Inspections</h4>
-                    <p style="font-size: 0.88rem; color: var(--gray-600);">Early detection of termite infestation to prevent significant damage</p>
+                    <p>Early detection of termite infestation to prevent significant structural damage to your property</p>
                 </div>
-                <div class="feature-card animate-on-scroll" style="flex-direction: column; text-align: center;">
-                    <div class="feature-icon" style="margin: 0 auto 12px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                <div class="termite-card animate-on-scroll">
+                    <div class="termite-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
                     </div>
                     <h4>Treatment Options</h4>
-                    <p style="font-size: 0.88rem; color: var(--gray-600);">Industry-approved methods for termite pest control</p>
+                    <p>Industry-approved chemical and non-chemical methods for effective termite pest control</p>
                 </div>
-                <div class="feature-card animate-on-scroll" style="flex-direction: column; text-align: center;">
-                    <div class="feature-icon" style="margin: 0 auto 12px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <div class="termite-card animate-on-scroll">
+                    <div class="termite-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
                     </div>
                     <h4>Termite Barriers</h4>
-                    <p style="font-size: 0.88rem; color: var(--gray-600);">Protect your home or business with preventative barriers</p>
+                    <p>Protect your home or business with preventative chemical and physical barrier systems</p>
                 </div>
-                <div class="feature-card animate-on-scroll" style="flex-direction: column; text-align: center;">
-                    <div class="feature-icon" style="margin: 0 auto 12px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <div class="termite-card animate-on-scroll">
+                    <div class="termite-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                     </div>
                     <h4>Regional Coverage</h4>
-                    <p style="font-size: 0.88rem; color: var(--gray-600);">Serving multiple locations with professional pest services</p>
+                    <p>Serving Armidale and the entire New England region with professional termite services</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="wave-divider wave-navy">
-        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0,0 C360,60 1080,0 1440,48 L1440,60 L0,60 Z"/>
+    <!-- Wave: Termites → Industries -->
+    <div style="position: relative; z-index: 3; line-height: 0; margin-top: -1px;">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="display: block; width: 100%;">
+            <rect width="1440" height="80" fill="#0a1225"/>
+            <path d="M0,25 C360,70 1080,5 1440,45 L1440,80 L0,80 Z" fill="#0f1b33"/>
         </svg>
     </div>
 
