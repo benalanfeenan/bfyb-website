@@ -323,11 +323,20 @@
 
         /* ===== PAGE-SPECIFIC WHY CHOOSE SECTION ===== */
         .why-choose {
-            background: var(--white);
+            background: #f8fafc;
             position: relative;
             overflow: hidden;
         }
-        .why-choose::before { display: none; }
+        .why-choose::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40%;
+            height: 100%;
+            background: radial-gradient(ellipse at 80% 50%, rgba(243, 112, 33, 0.04) 0%, transparent 70%);
+            pointer-events: none;
+        }
         .why-choose::after { display: none; }
         .why-choose .container {
             display: grid;
@@ -337,14 +346,40 @@
             position: relative;
             z-index: 2;
         }
+
+        /* Left text column with card styling */
+        .why-choose-text-col {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px 36px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e2e8f0;
+            position: relative;
+        }
+        .why-choose-text-col::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 20px;
+            bottom: 20px;
+            width: 4px;
+            border-radius: 4px;
+            background: linear-gradient(180deg, #f37021, #f59e0b);
+        }
+
         .why-choose .section-label {
             color: var(--orange);
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 0.8rem;
         }
         .why-choose h2 {
-            font-size: 2.8rem;
+            font-size: 2.6rem;
             font-weight: 900;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
             color: var(--navy);
+            line-height: 1.15;
         }
         .why-choose h2 span { color: var(--orange); }
         .why-choose h2::after {
@@ -357,34 +392,35 @@
             margin-top: 16px;
         }
         .why-choose-text {
-            font-size: 1.05rem;
-            margin-bottom: 20px;
+            font-size: 1rem;
+            margin-bottom: 16px;
             color: #475569;
             line-height: 1.8;
         }
         .method-list {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin-top: 8px;
+            gap: 10px;
+            margin-top: 16px;
         }
         .method-item {
             display: flex;
             align-items: center;
-            gap: 14px;
-            padding: 16px 20px;
+            gap: 12px;
+            padding: 14px 18px;
             background: #f8fafc;
-            border-radius: 12px;
+            border-radius: 10px;
             font-weight: 600;
+            font-size: 0.92rem;
             color: var(--navy);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all 0.3s ease;
             border: 1px solid #e2e8f0;
         }
         .method-item:hover {
-            background: rgba(243, 112, 33, 0.06);
-            transform: translateY(-3px);
+            background: var(--white);
+            transform: translateY(-2px);
             border-color: rgba(243, 112, 33, 0.3);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
         }
         .method-item svg {
             color: var(--orange);
@@ -394,7 +430,7 @@
         .why-choose-features {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            gap: 18px;
         }
 
         /* Orange feature cards with white icons */
@@ -402,44 +438,45 @@
             background: linear-gradient(135deg, #f37021 0%, #e05e10 100%);
             border: none;
             border-radius: 16px;
-            padding: 28px 24px;
+            padding: 30px 24px;
             text-align: center;
             flex-direction: column;
             align-items: center;
-            box-shadow: 0 4px 16px rgba(243, 112, 33, 0.25);
+            box-shadow: 0 6px 20px rgba(243, 112, 33, 0.25), 0 2px 8px rgba(0,0,0,0.06);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
         .why-choose .feature-card::before { display: none; }
         .why-choose .feature-card:hover {
             background: linear-gradient(135deg, #e05e10 0%, #c74e08 100%);
             border-color: transparent;
-            transform: translateY(-8px);
+            transform: translateY(-6px);
             box-shadow: 0 16px 40px rgba(243, 112, 33, 0.35);
         }
         .why-choose .feature-icon {
-            width: 64px;
-            height: 64px;
-            border-radius: 16px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
             background: rgba(255, 255, 255, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.35);
             margin-bottom: 16px;
         }
         .why-choose .feature-card:hover .feature-icon {
             background: rgba(255, 255, 255, 0.3);
-            border-color: rgba(255, 255, 255, 0.4);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-            transform: scale(1.1);
+            border-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            transform: scale(1.08);
         }
         .why-choose .feature-icon svg { color: var(--white); }
         .why-choose .feature-card:hover .feature-icon svg { color: var(--white); }
         .why-choose .feature-card h4 {
             color: var(--white);
-            font-size: 1.05rem;
+            font-size: 1.02rem;
+            font-weight: 700;
             margin-bottom: 8px;
         }
         .why-choose .feature-card p {
-            color: rgba(255, 255, 255, 0.85);
-            font-size: 0.88rem;
+            color: rgba(255, 255, 255, 0.88);
+            font-size: 0.85rem;
             line-height: 1.6;
         }
 
@@ -1263,7 +1300,7 @@
     <!-- Why Choose BFYB -->
     <section class="why-choose section-padding" id="why-choose" aria-label="Why choose Bang For Ya Buck" style="background: var(--white);">
         <div class="container">
-            <div class="animate-on-scroll">
+            <div class="why-choose-text-col animate-on-scroll">
                 <div class="section-label">About Us</div>
                 <h2>Why Choose <span>BFYB?</span></h2>
                 <p class="why-choose-text">We're your local Armidale team for pest control, carpet cleaning, and flood restoration. With over 42,000 jobs under our belt across Armidale, Guyra, Uralla, and Walcha, we know the New England region inside and out.</p>
@@ -1288,7 +1325,7 @@
                         Termite Control &amp; Barrier Protection
                     </div>
                 </div>
-                <a href="#quote" class="btn-orange" style="margin-top:28px;">Request Quote
+                <a href="#quote" class="btn-orange" style="margin-top:24px;">Request Quote
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                 </a>
             </div>
