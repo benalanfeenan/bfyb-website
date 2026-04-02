@@ -551,7 +551,7 @@
 
         /* ===== PAGE-SPECIFIC SERVICES SECTION ===== */
         .services-section {
-            background: var(--navy);
+            background: var(--gray-50);
             position: relative;
         }
         .services-section .section-header {
@@ -562,11 +562,10 @@
             font-size: 2.5rem;
             font-weight: 900;
             margin-bottom: 12px;
-            color: var(--white);
         }
         .services-section h2 span { color: var(--orange); }
         .services-section .section-desc {
-            color: var(--gray-400);
+            color: var(--gray-600);
             font-size: 1.05rem;
         }
         .services-section .section-header::after {
@@ -579,110 +578,109 @@
             margin: 20px auto 0;
         }
 
-        /* Overlay image grid */
-        .services-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 320px 320px;
+        /* Horizontal stacked cards */
+        #services .services-grid {
+            display: flex;
+            flex-direction: column;
             gap: 20px;
         }
-        /* Featured card: tall left column */
-        .service-card.sc-featured {
-            grid-row: 1 / 3;
-        }
-
         .service-card {
-            border-radius: 20px;
+            display: grid;
+            grid-template-columns: 200px 1fr auto;
+            align-items: center;
+            background: var(--white);
+            border-radius: 16px;
             overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(0,0,0,0.05);
             position: relative;
-            cursor: pointer;
+            text-decoration: none;
         }
-        .service-card img {
+        .service-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, var(--orange), #f59e0b);
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: transform 0.4s ease;
+            z-index: 2;
+        }
+        .service-card:hover::before {
+            transform: scaleY(1);
+        }
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(243, 112, 33, 0.15), 0 4px 12px rgba(0,0,0,0.08);
+            border-color: rgba(243, 112, 33, 0.15);
+        }
+        .service-card-img {
+            width: 200px;
+            height: 160px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        .service-card-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            display: block;
-            transition: transform 0.6s ease;
+            transition: transform 0.5s ease;
         }
-        .service-card:hover img {
+        .service-card:hover .service-card-img img {
             transform: scale(1.08);
         }
-        /* Dark gradient overlay */
-        .service-card .sc-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(10, 18, 37, 0.92) 0%, rgba(10, 18, 37, 0.5) 40%, rgba(10, 18, 37, 0.1) 70%, transparent 100%);
-            z-index: 1;
-            transition: background 0.4s ease;
+        .service-card-body {
+            padding: 24px 28px;
         }
-        .service-card:hover .sc-overlay {
-            background: linear-gradient(to top, rgba(10, 18, 37, 0.95) 0%, rgba(10, 18, 37, 0.55) 45%, rgba(10, 18, 37, 0.15) 75%, transparent 100%);
-        }
-        /* Content positioned at bottom */
-        .service-card .sc-content {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 28px;
-            z-index: 2;
-            transform: translateY(0);
-            transition: transform 0.4s ease;
-        }
-        .service-card:hover .sc-content {
-            transform: translateY(-6px);
-        }
-        .service-card .sc-content h3 {
-            font-size: 1.3rem;
+        .service-card-body h3 {
+            font-size: 1.2rem;
             font-weight: 800;
-            color: var(--white);
+            color: var(--navy);
             margin-bottom: 6px;
         }
-        .service-card.sc-featured .sc-content h3 {
-            font-size: 1.8rem;
-        }
-        .service-card .sc-price {
-            display: inline-block;
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: var(--white);
-            background: var(--orange);
-            padding: 4px 14px;
-            border-radius: 20px;
-            margin-bottom: 10px;
-        }
-        .service-card .sc-content p {
-            font-size: 0.9rem;
-            color: rgba(255,255,255,0.8);
+        .service-card-body p {
+            font-size: 0.92rem;
+            color: var(--gray-600);
             line-height: 1.6;
-            margin-bottom: 16px;
-            max-height: 0;
-            overflow: hidden;
-            opacity: 0;
-            transition: all 0.4s ease;
+            margin-bottom: 12px;
         }
-        .service-card:hover .sc-content p {
-            max-height: 80px;
-            opacity: 1;
-        }
-        .service-card.sc-featured .sc-content p {
-            max-height: none;
-            opacity: 1;
-        }
-        .service-card .sc-link {
+        .service-card-body .service-link {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             color: var(--orange);
             font-weight: 700;
             font-size: 0.9rem;
             transition: all 0.3s ease;
         }
-        .service-card .sc-link:hover {
-            gap: 14px;
-            color: #f59e0b;
+        .service-card-body .service-link:hover {
+            gap: 10px;
         }
-        .service-card .sc-link svg { color: inherit; }
+        .service-card-price {
+            padding: 24px 36px;
+            text-align: center;
+            flex-shrink: 0;
+            border-left: 1px solid rgba(0,0,0,0.06);
+        }
+        .service-card-price .price-label {
+            font-size: 0.72rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--gray-400);
+            margin-bottom: 4px;
+        }
+        .service-card-price .price-amount {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--orange);
+            line-height: 1.1;
+        }
 
         /* ===== PAGE-SPECIFIC PEST CONTROL DETAIL ===== */
         .pest-detail {
@@ -1055,8 +1053,8 @@
         @media (max-width: 1024px) {
             .hero .container { grid-template-columns: 1fr; }
             .quote-form-card { max-width: 500px; }
-            .services-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 280px 280px; }
-            .service-card.sc-featured { grid-row: 1 / 3; }
+            .service-card-img { width: 180px; height: 140px; }
+            .service-card { grid-template-columns: 180px 1fr auto; }
             .pest-detail .container { grid-template-columns: 1fr; }
             .process-grid { grid-template-columns: repeat(2, 1fr); }
             .process-step:not(:last-child)::after { display: none; }
@@ -1075,11 +1073,10 @@
             .hero .container { gap: 30px; }
             .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
             .stat-number { font-size: 2.6rem; }
-            .services-grid { grid-template-columns: 1fr; grid-template-rows: auto; gap: 16px; }
-            .service-card.sc-featured { grid-row: auto; }
-            .service-card { height: 260px !important; }
-            .service-card.sc-featured .sc-content h3 { font-size: 1.3rem; }
-            .service-card .sc-content p { max-height: none; opacity: 1; }
+            .service-card { grid-template-columns: 1fr; height: auto !important; }
+            .service-card-img { width: 100%; height: 180px; }
+            .service-card-price { border-left: none; border-top: 1px solid rgba(0,0,0,0.06); padding: 16px 24px; }
+            .service-card-price .price-amount { font-size: 1.6rem; }
             .pest-services-list { grid-template-columns: 1fr; }
             .industries-grid { grid-template-columns: repeat(3, 1fr); }
             .footer-grid { grid-template-columns: 1fr; }
@@ -1417,7 +1414,7 @@
     <div style="position: relative; z-index: 3; line-height: 0; margin-top: -1px;">
         <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="display: block; width: 100%;">
             <rect width="1440" height="80" fill="#f37021"/>
-            <path d="M0,20 C360,70 720,0 1080,50 C1260,70 1380,30 1440,40 L1440,80 L0,80 Z" fill="#0f1b33"/>
+            <path d="M0,20 C360,70 720,0 1080,50 C1260,70 1380,30 1440,40 L1440,80 L0,80 Z" fill="#f8fafc"/>
         </svg>
     </div>
 
@@ -1431,63 +1428,78 @@
             </div>
 
             <div class="services-grid">
-                <!-- Featured: Pest Control (tall left column) -->
-                <a href="pest-control.html" class="service-card sc-featured animate-on-scroll" aria-label="Pest Control Armidale">
-                    <img src="images/pest control.jpg" alt="Professional pest control technician spraying treatment in Armidale home" loading="lazy">
-                    <div class="sc-overlay"></div>
-                    <div class="sc-content">
-                        <div class="sc-price">From $182</div>
+                <!-- Pest Control -->
+                <article class="service-card animate-on-scroll">
+                    <div class="service-card-img">
+                        <img src="images/pest control.jpg" alt="Professional pest control technician spraying treatment in Armidale home" loading="lazy">
+                    </div>
+                    <div class="service-card-body">
                         <h3>Pest Control Armidale</h3>
-                        <p>Cockroaches, spiders, rodents, ants, termites and more — all backed by our 12-month warranty.</p>
-                        <span class="sc-link">Learn More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                        <p>Comprehensive pest control for your home or business. 12-month warranty included.</p>
+                        <a href="pest-control.html" class="service-link">Learn More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
                     </div>
-                </a>
+                    <div class="service-card-price">
+                        <div class="price-label">From</div>
+                        <div class="price-amount">$182</div>
+                    </div>
+                </article>
 
-                <!-- Carpet Cleaning (top right) -->
-                <a href="carpet-cleaning.html" class="service-card animate-on-scroll" aria-label="Carpet Cleaning Armidale">
-                    <img src="images/carpet cleaning.jpg" alt="Professional carpet cleaning service in Armidale" loading="lazy">
-                    <div class="sc-overlay"></div>
-                    <div class="sc-content">
-                        <div class="sc-price">From $289</div>
+                <!-- Carpet Cleaning -->
+                <article class="service-card animate-on-scroll">
+                    <div class="service-card-img">
+                        <img src="images/carpet cleaning.jpg" alt="Professional carpet cleaning service in Armidale" loading="lazy">
+                    </div>
+                    <div class="service-card-body">
                         <h3>Carpet Cleaning Armidale</h3>
-                        <p>Deep cleaning, stain removal, and same-day drying.</p>
-                        <span class="sc-link">Learn More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                        <p>Deep cleaning, stain removal, and same-day drying for homes and businesses.</p>
+                        <a href="carpet-cleaning.html" class="service-link">Learn More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
                     </div>
-                </a>
+                    <div class="service-card-price">
+                        <div class="price-label">From</div>
+                        <div class="price-amount">$289</div>
+                    </div>
+                </article>
 
-                <!-- Flood Restoration (bottom right left) -->
-                <a href="flood-restoration.html" class="service-card animate-on-scroll" aria-label="Flood Restoration Armidale" style="grid-column: 2 / 3;">
-                    <img src="images/flood restoration.jpg" alt="Emergency flood water damage restoration in Armidale" loading="lazy">
-                    <div class="sc-overlay"></div>
-                    <div class="sc-content">
-                        <div class="sc-price">From $182</div>
+                <!-- Flood Restoration -->
+                <article class="service-card animate-on-scroll">
+                    <div class="service-card-img">
+                        <img src="images/flood restoration.jpg" alt="Emergency flood water damage restoration in Armidale" loading="lazy">
+                    </div>
+                    <div class="service-card-body">
                         <h3>Flood Restoration Armidale</h3>
                         <p>24/7 emergency response. Rapid water extraction and full damage restoration.</p>
-                        <span class="sc-link">Learn More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                        <a href="flood-restoration.html" class="service-link">Learn More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
                     </div>
-                </a>
-            </div>
+                    <div class="service-card-price">
+                        <div class="price-label">From</div>
+                        <div class="price-amount">$182</div>
+                    </div>
+                </article>
 
-            <!-- Pre-Purchase as a separate banner row -->
-            <a href="pre-purchase.html" class="service-card animate-on-scroll" aria-label="Pre-Purchase Reports" style="display: block; margin-top: 20px; height: 200px; border-radius: 20px; overflow: hidden; position: relative;">
-                <img src="images/a1.png" alt="A1 Property Consultancy - Pre-purchase property inspection and building report" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
-                <div class="sc-overlay"></div>
-                <div class="sc-content">
-                    <div class="sc-price">From $309</div>
-                    <h3>Pre-Purchase Property Reports</h3>
-                    <p style="max-height: none; opacity: 1;">Professional property inspections before you buy — comprehensive building and pest reports for complete peace of mind.</p>
-                    <span class="sc-link">Learn More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
-                </div>
-            </a>
+                <!-- Pre-Purchase Reports -->
+                <article class="service-card animate-on-scroll">
+                    <div class="service-card-img">
+                        <img src="images/a1.png" alt="A1 Property Consultancy - Pre-purchase property inspection and building report" loading="lazy">
+                    </div>
+                    <div class="service-card-body">
+                        <h3>Pre-Purchase Reports</h3>
+                        <p>Professional property inspections before buying — peace of mind guaranteed.</p>
+                        <a href="pre-purchase.html" class="service-link">Learn More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                    </div>
+                    <div class="service-card-price">
+                        <div class="price-label">From</div>
+                        <div class="price-amount">$309</div>
+                    </div>
+                </article>
+            </div>
         </div>
     </section>
 
-    <!-- Subtle divider: Services → Expertise (both dark) -->
+    <!-- Wave: Services → Expertise -->
     <div style="position: relative; z-index: 3; line-height: 0; margin-top: -1px;">
-        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="display: block; width: 100%;">
-            <rect width="1440" height="60" fill="#0f1b33"/>
-            <path d="M0,15 C240,55 480,5 720,35 C960,60 1200,10 1440,30 L1440,60 L0,60 Z" fill="rgba(15, 27, 51, 0.95)"/>
-            <line x1="200" y1="5" x2="1240" y2="5" stroke="rgba(243,112,33,0.3)" stroke-width="2"/>
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="display: block; width: 100%;">
+            <rect width="1440" height="80" fill="#f8fafc"/>
+            <path d="M0,25 C180,70 540,0 900,45 C1100,65 1300,20 1440,40 L1440,80 L0,80 Z" fill="rgba(15, 27, 51, 0.95)"/>
         </svg>
     </div>
 
