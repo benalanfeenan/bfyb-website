@@ -750,69 +750,126 @@
         .expertise-slide-grid {
             display: grid;
             grid-template-columns: 1.2fr 1fr;
-            gap: 60px;
+            gap: 40px;
         }
-        /* Carousel Arrows */
+        /* Expertise content cards */
+        .expertise-left-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 36px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            border: 1px solid #e2e8f0;
+        }
+        .expertise-right-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 36px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            border: 1px solid #e2e8f0;
+        }
+        .expertise-left-card h2 {
+            font-size: 1.7rem;
+            font-weight: 900;
+            color: var(--navy);
+            margin-bottom: 16px;
+        }
+        .expertise-left-card h2 span { color: var(--orange); }
+        .expertise-left-card > p {
+            color: var(--gray-600);
+            font-size: 0.95rem;
+            margin-bottom: 24px;
+            line-height: 1.7;
+        }
+        .expertise-left-card h3 {
+            color: var(--navy);
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+        }
+        .expertise-right-card h3 {
+            color: var(--navy);
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+        /* Override pest-service-item for light bg */
+        .expertise-left-card .pest-service-item {
+            background: var(--gray-50);
+            color: var(--gray-700);
+        }
+        .expertise-left-card .pest-service-item:hover {
+            background: rgba(243, 112, 33, 0.06);
+        }
+        .expertise-left-card .pest-service-item svg { color: var(--orange); }
+        /* Override why-pest-item for light bg */
+        .expertise-right-card .why-pest-item {
+            background: var(--gray-50);
+            border-left: 3px solid var(--orange);
+        }
+        .expertise-right-card .why-pest-item strong { color: var(--navy); }
+        .expertise-right-card .why-pest-item span { color: var(--gray-600); }
+        .expertise-right-card .why-pest-item svg { color: var(--orange); }
+        /* Carousel nav bar (arrows + dots together) */
+        .carousel-nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 40px;
+        }
         .carousel-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 10;
-            background: rgba(243, 112, 33, 0.15);
-            border: 2px solid rgba(243, 112, 33, 0.3);
-            color: var(--orange);
-            width: 48px;
-            height: 48px;
+            background: var(--white);
+            border: 2px solid #e2e8f0;
+            color: var(--navy);
+            width: 44px;
+            height: 44px;
             border-radius: 50%;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
             transition: all 0.3s ease;
+            flex-shrink: 0;
+            position: static;
+            transform: none;
         }
         .carousel-arrow:hover {
             background: var(--orange);
             color: var(--white);
             border-color: var(--orange);
         }
-        .carousel-prev { left: -10px; }
-        .carousel-next { right: -10px; }
-        /* Carousel Dots */
         .carousel-dots {
             display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin-top: 40px;
+            gap: 10px;
         }
         .carousel-dot {
             display: flex;
             align-items: center;
             padding: 10px 20px;
-            background: rgba(255,255,255,0.06);
-            border: 1.5px solid rgba(255,255,255,0.12);
-            color: var(--gray-400);
+            background: var(--white);
+            border: 1.5px solid #e2e8f0;
+            color: var(--gray-600);
             border-radius: 50px;
             cursor: pointer;
-            font-size: 0.88rem;
+            font-size: 0.85rem;
             font-weight: 600;
             font-family: inherit;
             transition: all 0.3s ease;
         }
         .carousel-dot:hover {
-            background: rgba(243, 112, 33, 0.1);
-            color: var(--white);
-            border-color: rgba(243, 112, 33, 0.3);
+            border-color: var(--orange);
+            color: var(--orange);
         }
         .carousel-dot.active {
-            background: rgba(243, 112, 33, 0.15);
-            color: var(--orange);
+            background: var(--orange);
+            color: var(--white);
             border-color: var(--orange);
         }
+        .carousel-dot.active svg { fill: var(--white); }
         @media (max-width: 768px) {
-            .expertise-slide-grid { grid-template-columns: 1fr; gap: 30px; }
-            .carousel-arrow { display: none; }
-            .carousel-dots { flex-direction: column; align-items: center; gap: 8px; }
-            .carousel-dot { width: 100%; max-width: 260px; justify-content: center; }
+            .expertise-slide-grid { grid-template-columns: 1fr; gap: 20px; }
+            .expertise-left-card, .expertise-right-card { padding: 24px; }
+            .carousel-nav { flex-wrap: wrap; gap: 10px; }
+            .carousel-dots { flex-wrap: wrap; justify-content: center; }
+            .carousel-dot { font-size: 0.78rem; padding: 8px 14px; }
         }
 
         /* ===== PAGE-SPECIFIC PROCESS SECTION ===== */
@@ -1485,35 +1542,27 @@
     <div style="position: relative; z-index: 3; line-height: 0; margin-top: -1px;">
         <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="display: block; width: 100%;">
             <rect width="1440" height="80" fill="#f8fafc"/>
-            <path d="M0,25 C180,70 540,0 900,45 C1100,65 1300,20 1440,40 L1440,80 L0,80 Z" fill="rgba(15, 27, 51, 0.95)"/>
+            <path d="M0,25 C180,70 540,0 900,45 C1100,65 1300,20 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
         </svg>
     </div>
 
     <!-- Our Expertise Carousel Section -->
-    <section class="pest-detail section-padding section-gray" id="expertise" aria-label="Our expertise services carousel">
+    <section class="section-padding" id="expertise" style="background: var(--white);" aria-label="Our expertise services carousel">
         <div class="container" style="display: block;">
             <div class="section-header animate-on-scroll" style="text-align: center; margin-bottom: 50px;">
                 <div class="section-label" style="color: var(--orange); justify-content: center;">Our Expertise</div>
-                <h2 style="font-size: 2.2rem; font-weight: 900; color: var(--white);">Professional <span style="color: var(--orange);">Services</span> You Can Trust</h2>
+                <h2 style="font-size: 2.2rem; font-weight: 900; color: var(--navy);">Professional <span style="color: var(--orange);">Services</span> You Can Trust</h2>
             </div>
 
             <div class="expertise-carousel" aria-live="polite">
-                <!-- Carousel Navigation Arrows -->
-                <button class="carousel-arrow carousel-prev" aria-label="Previous service" onclick="changeExpertiseSlide(-1)">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-                </button>
-                <button class="carousel-arrow carousel-next" aria-label="Next service" onclick="changeExpertiseSlide(1)">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                </button>
-
                 <!-- SLIDE 1: Pest Control -->
                 <div class="expertise-slide active" data-slide="0">
                     <div class="expertise-slide-grid">
-                        <div>
-                            <h2 style="font-size: 2rem; font-weight: 900; color: var(--white); margin-bottom: 20px;">Comprehensive <span style="color: var(--orange);">Pest Control Services</span></h2>
-                            <p style="color: var(--gray-300); font-size: 1.05rem; margin-bottom: 32px;">At BFYB Pest Control, we offer effective pest control solutions to address all your pest control needs. Whether you need residential pest control, commercial pest control services, or termite control, our professional team ensures high-quality, affordable pest control services.</p>
+                        <div class="expertise-left-card">
+                            <h2>Comprehensive <span>Pest Control Services</span></h2>
+                            <p>At BFYB Pest Control, we offer effective pest control solutions to address all your pest control needs. Whether you need residential pest control, commercial pest control services, or termite control, our professional team ensures high-quality, affordable pest control services.</p>
 
-                            <h3 style="color: var(--white); font-size: 1.3rem; margin-bottom: 20px;">Our Pest Control Services Include:</h3>
+                            <h3>Our Pest Control Services Include:</h3>
                             <div class="pest-services-list">
                                 <div class="pest-service-item">
                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -1565,8 +1614,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div>
-                            <h3 style="color: var(--white); font-size: 1.3rem; margin-bottom: 24px;">Why Choose BFYB Pest Control?</h3>
+                        <div class="expertise-right-card">
+                            <h3>Why Choose BFYB Pest Control?</h3>
                             <div class="why-pest-list">
                                 <div class="why-pest-item">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -1589,7 +1638,7 @@
                                     <div><strong>Short Notice Day Service</strong><br><span>Available for urgent pest problem resolutions</span></div>
                                 </div>
                             </div>
-                            <a href="pest-control.html" class="btn-primary" style="display: inline-block; margin-top: 24px; padding: 14px 32px; background: var(--orange); color: var(--white); border-radius: 8px; text-decoration: none; font-weight: 700; transition: all 0.3s ease;">Learn More About Pest Control &rarr;</a>
+                            <a href="pest-control.html" class="btn-orange" style="display: inline-block; margin-top: 24px;">Learn More About Pest Control &rarr;</a>
                         </div>
                     </div>
                 </div>
@@ -1597,11 +1646,11 @@
                 <!-- SLIDE 2: Carpet Cleaning -->
                 <div class="expertise-slide" data-slide="1">
                     <div class="expertise-slide-grid">
-                        <div>
-                            <h2 style="font-size: 2rem; font-weight: 900; color: var(--white); margin-bottom: 20px;">Professional <span style="color: var(--orange);">Carpet Cleaning Services</span></h2>
-                            <p style="color: var(--gray-300); font-size: 1.05rem; margin-bottom: 32px;">BFYB provides expert carpet cleaning services across Armidale and the New England Region. Using professional-grade equipment and eco-friendly solutions, we restore your carpets to like-new condition, removing deep stains, allergens, and built-up dirt.</p>
+                        <div class="expertise-left-card">
+                            <h2>Professional <span>Carpet Cleaning Services</span></h2>
+                            <p>BFYB provides expert carpet cleaning services across Armidale and the New England Region. Using professional-grade equipment and eco-friendly solutions, we restore your carpets to like-new condition, removing deep stains, allergens, and built-up dirt.</p>
 
-                            <h3 style="color: var(--white); font-size: 1.3rem; margin-bottom: 20px;">Our Carpet Cleaning Services Include:</h3>
+                            <h3>Our Carpet Cleaning Services Include:</h3>
                             <div class="pest-services-list">
                                 <div class="pest-service-item">
                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -1653,8 +1702,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div>
-                            <h3 style="color: var(--white); font-size: 1.3rem; margin-bottom: 24px;">Why Choose BFYB Carpet Cleaning?</h3>
+                        <div class="expertise-right-card">
+                            <h3>Why Choose BFYB Carpet Cleaning?</h3>
                             <div class="why-pest-list">
                                 <div class="why-pest-item">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -1677,7 +1726,7 @@
                                     <div><strong>Affordable Pricing</strong><br><span>Competitive rates for residential &amp; commercial jobs</span></div>
                                 </div>
                             </div>
-                            <a href="carpet-cleaning.html" class="btn-primary" style="display: inline-block; margin-top: 24px; padding: 14px 32px; background: var(--orange); color: var(--white); border-radius: 8px; text-decoration: none; font-weight: 700; transition: all 0.3s ease;">Learn More About Carpet Cleaning &rarr;</a>
+                            <a href="carpet-cleaning.html" class="btn-orange" style="display: inline-block; margin-top: 24px;">Learn More About Carpet Cleaning &rarr;</a>
                         </div>
                     </div>
                 </div>
@@ -1685,11 +1734,11 @@
                 <!-- SLIDE 3: Water / Flood Restoration -->
                 <div class="expertise-slide" data-slide="2">
                     <div class="expertise-slide-grid">
-                        <div>
-                            <h2 style="font-size: 2rem; font-weight: 900; color: var(--white); margin-bottom: 20px;">Emergency <span style="color: var(--orange);">Water &amp; Flood Restoration</span></h2>
-                            <p style="color: var(--gray-300); font-size: 1.05rem; margin-bottom: 32px;">When water damage strikes, BFYB is here to help. We provide rapid-response flood and water restoration services across Armidale and the New England Region. From burst pipes to storm damage, our team has the equipment and expertise to restore your property fast.</p>
+                        <div class="expertise-left-card">
+                            <h2>Emergency <span>Water &amp; Flood Restoration</span></h2>
+                            <p>When water damage strikes, BFYB is here to help. We provide rapid-response flood and water restoration services across Armidale and the New England Region. From burst pipes to storm damage, our team has the equipment and expertise to restore your property fast.</p>
 
-                            <h3 style="color: var(--white); font-size: 1.3rem; margin-bottom: 20px;">Our Water Restoration Services Include:</h3>
+                            <h3>Our Water Restoration Services Include:</h3>
                             <div class="pest-services-list">
                                 <div class="pest-service-item">
                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -1741,8 +1790,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div>
-                            <h3 style="color: var(--white); font-size: 1.3rem; margin-bottom: 24px;">Why Choose BFYB Water Restoration?</h3>
+                        <div class="expertise-right-card">
+                            <h3>Why Choose BFYB Water Restoration?</h3>
                             <div class="why-pest-list">
                                 <div class="why-pest-item">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -1765,24 +1814,23 @@
                                     <div><strong>Full Property Restoration</strong><br><span>From water extraction to complete rebuild support</span></div>
                                 </div>
                             </div>
-                            <a href="flood-restoration.html" class="btn-primary" style="display: inline-block; margin-top: 24px; padding: 14px 32px; background: var(--orange); color: var(--white); border-radius: 8px; text-decoration: none; font-weight: 700; transition: all 0.3s ease;">Learn More About Water Restoration &rarr;</a>
+                            <a href="flood-restoration.html" class="btn-orange" style="display: inline-block; margin-top: 24px;">Learn More About Water Restoration &rarr;</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Carousel Dots -->
-                <div class="carousel-dots">
-                    <button class="carousel-dot active" data-slide="0" onclick="goToExpertiseSlide(0)" aria-label="Pest Control">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 6px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                        Pest Control
+                <!-- Carousel Nav: Arrows + Dots -->
+                <div class="carousel-nav">
+                    <button class="carousel-arrow" aria-label="Previous service" onclick="changeExpertiseSlide(-1)">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
                     </button>
-                    <button class="carousel-dot" data-slide="1" onclick="goToExpertiseSlide(1)" aria-label="Carpet Cleaning">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 6px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                        Carpet Cleaning
-                    </button>
-                    <button class="carousel-dot" data-slide="2" onclick="goToExpertiseSlide(2)" aria-label="Water Restoration">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 6px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                        Water Restoration
+                    <div class="carousel-dots">
+                        <button class="carousel-dot active" data-slide="0" onclick="goToExpertiseSlide(0)" aria-label="Pest Control">Pest Control</button>
+                        <button class="carousel-dot" data-slide="1" onclick="goToExpertiseSlide(1)" aria-label="Carpet Cleaning">Carpet Cleaning</button>
+                        <button class="carousel-dot" data-slide="2" onclick="goToExpertiseSlide(2)" aria-label="Water Restoration">Water Restoration</button>
+                    </div>
+                    <button class="carousel-arrow" aria-label="Next service" onclick="changeExpertiseSlide(1)">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
                     </button>
                 </div>
             </div>
