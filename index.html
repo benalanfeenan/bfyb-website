@@ -880,46 +880,50 @@
         .process-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
+            gap: 24px;
         }
         .process-step {
             text-align: center;
-            padding: 30px 20px;
+            padding: 32px 24px;
             position: relative;
+            background: linear-gradient(135deg, #f37021 0%, #e05e10 100%);
+            border-radius: 16px;
+            box-shadow: 0 6px 20px rgba(243, 112, 33, 0.2);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .process-step:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 35px rgba(243, 112, 33, 0.3);
         }
         .process-step:not(:last-child)::after {
-            content: '';
-            position: absolute;
-            top: 45px;
-            right: -15px;
-            width: 30px;
-            height: 2px;
-            background: var(--gray-300);
+            display: none;
         }
         .step-number {
-            width: 56px;
-            height: 56px;
+            width: 52px;
+            height: 52px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--orange), #e05e10);
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.35);
             color: var(--white);
             font-family: var(--font-heading);
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             font-weight: 800;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 18px;
-            box-shadow: 0 4px 15px rgba(243, 112, 33, 0.3);
+            margin: 0 auto 16px;
+            box-shadow: none;
         }
         .process-step h4 {
             font-size: 1rem;
             font-weight: 700;
             margin-bottom: 8px;
-            color: var(--navy);
+            color: var(--white);
         }
         .process-step p {
             font-size: 0.88rem;
-            color: var(--gray-600);
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.6;
         }
 
         /* ===== PAGE-SPECIFIC INDUSTRIES ===== */
@@ -1875,9 +1879,12 @@
         </div>
     </section>
 
-    <div class="wave-divider wave-orange-light">
-        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0,0 C360,60 1080,0 1440,48 L1440,60 L0,60 Z"/>
+    <!-- Wave: Process → Termites (navy/orange) -->
+    <div style="position: relative; z-index: 3; line-height: 0; margin-top: -1px;">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="display: block; width: 100%;">
+            <rect width="1440" height="80" fill="#ffffff"/>
+            <path d="M0,20 C240,70 480,10 720,45 C960,75 1200,15 1440,50 L1440,80 L0,80 Z" fill="#0f1b33"/>
+            <path d="M0,18 C240,68 480,8 720,43 C960,73 1200,13 1440,48 L1440,50 L0,20 Z" fill="#f37021" opacity="0.6"/>
         </svg>
     </div>
 
