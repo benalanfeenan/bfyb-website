@@ -482,7 +482,7 @@
 
         /* ===== PAGE-SPECIFIC STATS BAR ===== */
         .stats-bar {
-            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%);
+            background: linear-gradient(135deg, #f37021 0%, #e05e10 40%, #d4520a 70%, #f37021 100%);
             padding: 60px 0;
             position: relative;
             overflow: hidden;
@@ -490,38 +490,46 @@
         .stats-bar::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--orange), #f59e0b, var(--orange), #f59e0b);
-            background-size: 200% 100%;
-            animation: shimmer 3s linear infinite;
+            top: -50%;
+            left: -20%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .stats-bar::after {
+            content: '';
+            position: absolute;
+            bottom: -40%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
         }
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 30px;
             text-align: center;
-        }
-        .stat-item {
-            padding: 20px;
             position: relative;
-        }
-        .stat-item:not(:last-child)::after {
-            content: '';
-            position: absolute;
-            right: 0;
-            top: 20%;
-            height: 60%;
-            width: 1px;
-            background: rgba(255,255,255,0.1);
+            z-index: 2;
         }
         .stat-item {
-            transition: transform 0.3s ease;
+            padding: 28px 20px;
+            position: relative;
+            background: rgba(255,255,255,0.1);
+            border-radius: 16px;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255,255,255,0.15);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
         .stat-item:hover {
-            transform: scale(1.05);
+            transform: translateY(-6px) scale(1.03);
+            background: rgba(255,255,255,0.18);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
         }
         .stat-number {
             font-family: var(--font-heading);
@@ -530,19 +538,22 @@
             color: var(--white);
             line-height: 1;
             margin-bottom: 10px;
-            text-shadow: 0 2px 20px rgba(243, 112, 33, 0.3);
+            text-shadow: 0 3px 15px rgba(0,0,0,0.2);
         }
-        .stat-number span { color: var(--orange); }
+        .stat-number span { color: var(--white); opacity: 0.85; }
         .stat-label {
-            color: var(--gray-400);
+            color: rgba(255,255,255,0.9);
             font-size: 0.85rem;
-            font-weight: 600;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
         }
 
         /* ===== PAGE-SPECIFIC SERVICES SECTION ===== */
-        .services-section { background: var(--gray-50); }
+        .services-section {
+            background: var(--white);
+            position: relative;
+        }
         .services-section .section-header {
             text-align: center;
             margin-bottom: 60px;
@@ -573,11 +584,11 @@
         }
         .service-card {
             background: var(--white);
-            border-radius: var(--radius-lg);
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 1px solid rgba(0,0,0,0.06);
+            border: none;
             position: relative;
         }
         .service-card::before {
@@ -598,16 +609,24 @@
         }
         .service-card:hover {
             transform: translateY(-12px);
-            box-shadow: 0 20px 40px rgba(243, 112, 33, 0.15), 0 8px 16px rgba(0,0,0,0.08);
-            border-color: rgba(243, 112, 33, 0.2);
+            box-shadow: 0 20px 50px rgba(243, 112, 33, 0.2), 0 8px 20px rgba(0,0,0,0.1);
         }
         .service-card-image {
-            height: 200px;
+            height: 220px;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
             overflow: hidden;
+        }
+        .service-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .service-card:hover .service-card-image img {
+            transform: scale(1.08);
         }
         .service-card:nth-child(1) .service-card-image {
             background: linear-gradient(135deg, #0f1b33 0%, #1e3a5f 50%, #0f2847 100%);
@@ -621,19 +640,16 @@
         .service-card:nth-child(4) .service-card-image {
             background: linear-gradient(135deg, #1a3a6a 0%, #2a5298 50%, #1a3a6a 100%);
         }
-        .service-card-image::before {
+        .service-card-image::after {
             content: '';
             position: absolute;
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(243,112,33,0.12) 0%, transparent 70%);
-            transition: all 0.5s ease;
-        }
-        .service-card:hover .service-card-image::before {
-            width: 200px;
-            height: 200px;
-            background: radial-gradient(circle, rgba(243,112,33,0.2) 0%, transparent 70%);
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60%;
+            background: linear-gradient(to top, rgba(15,27,51,0.5), transparent);
+            z-index: 1;
+            pointer-events: none;
         }
         .service-card-image svg {
             width: 64px;
@@ -642,21 +658,12 @@
             opacity: 0.9;
             transition: all 0.4s ease;
             filter: drop-shadow(0 4px 12px rgba(243,112,33,0.3));
-            z-index: 1;
+            z-index: 2;
         }
         .service-card:hover .service-card-image svg {
             transform: scale(1.15);
             filter: drop-shadow(0 6px 20px rgba(243,112,33,0.5));
             opacity: 1;
-        }
-        .service-card-image::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 50%;
-            background: linear-gradient(to top, rgba(15,27,51,0.4), transparent);
         }
         .service-card-body {
             padding: 24px;
@@ -671,12 +678,12 @@
             display: inline-block;
             font-size: 0.82rem;
             font-weight: 700;
-            color: var(--orange);
-            background: linear-gradient(135deg, rgba(243, 112, 33, 0.1), rgba(243, 112, 33, 0.05));
-            padding: 4px 12px;
+            color: var(--white);
+            background: linear-gradient(135deg, #f37021, #e05e10);
+            padding: 4px 14px;
             border-radius: 20px;
             margin-bottom: 10px;
-            border: 1px solid rgba(243, 112, 33, 0.15);
+            border: none;
         }
         .service-card-body p {
             font-size: 0.9rem;
@@ -691,11 +698,14 @@
             align-items: center;
             gap: 6px;
             transition: all 0.3s ease;
+            padding: 8px 16px;
+            background: rgba(243, 112, 33, 0.08);
+            border-radius: 25px;
         }
         .service-link:hover {
             gap: 10px;
+            background: rgba(243, 112, 33, 0.15);
         }
-        .service-link:hover { gap: 10px; }
 
         /* ===== PAGE-SPECIFIC PEST CONTROL DETAIL ===== */
         .pest-detail {
@@ -1085,8 +1095,8 @@
             .method-list { grid-template-columns: 1fr; }
             .hero h1 { font-size: 2rem; }
             .hero .container { gap: 30px; }
-            .stats-grid { grid-template-columns: repeat(2, 1fr); }
-            .stat-item:not(:last-child)::after { display: none; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+            .stat-number { font-size: 2.6rem; }
             .services-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
             .pest-services-list { grid-template-columns: 1fr; }
             .industries-grid { grid-template-columns: repeat(3, 1fr); }
@@ -1389,6 +1399,14 @@
         </div>
     </section>
 
+    <!-- Wave: Why Choose → Stats Bar -->
+    <div style="position: relative; z-index: 3; line-height: 0; margin-top: -1px;">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="display: block; width: 100%;">
+            <rect width="1440" height="80" fill="#f8fafc"/>
+            <path d="M0,30 C240,80 480,0 720,40 C960,80 1200,10 1440,50 L1440,80 L0,80 Z" fill="#f37021"/>
+        </svg>
+    </div>
+
     <!-- Stats Bar -->
     <section class="stats-bar" aria-label="Company statistics">
         <div class="container">
@@ -1413,9 +1431,11 @@
         </div>
     </section>
 
-    <div class="wave-divider wave-white">
-        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0,0 C360,60 1080,0 1440,48 L1440,60 L0,60 Z"/>
+    <!-- Wave: Stats Bar → Services -->
+    <div style="position: relative; z-index: 3; line-height: 0; margin-top: -1px;">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="display: block; width: 100%;">
+            <rect width="1440" height="80" fill="#f37021"/>
+            <path d="M0,20 C360,70 720,0 1080,50 C1260,70 1380,30 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
         </svg>
     </div>
 
@@ -1431,7 +1451,7 @@
             <div class="services-grid">
                 <article class="service-card animate-on-scroll">
                     <div class="service-card-image">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        <img src="https://images.unsplash.com/photo-1632935190663-4b05770a5fd0?w=600&h=400&fit=crop&q=80" alt="Professional pest control technician spraying treatment in Armidale home" loading="lazy">
                     </div>
                     <div class="service-card-body">
                         <h3>Pest Control Armidale</h3>
@@ -1443,7 +1463,7 @@
 
                 <article class="service-card animate-on-scroll">
                     <div class="service-card-image">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop&q=80" alt="Professional carpet cleaning service in Armidale" loading="lazy">
                     </div>
                     <div class="service-card-body">
                         <h3>Carpet Cleaning Armidale</h3>
@@ -1455,7 +1475,7 @@
 
                 <article class="service-card animate-on-scroll">
                     <div class="service-card-image">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+                        <img src="https://images.unsplash.com/photo-1525498128493-380d1990a112?w=600&h=400&fit=crop&q=80" alt="Emergency flood water damage restoration in Armidale" loading="lazy">
                     </div>
                     <div class="service-card-body">
                         <h3>Flood Restoration Armidale</h3>
@@ -1466,8 +1486,8 @@
                 </article>
 
                 <article class="service-card animate-on-scroll">
-                    <div class="service-card-image" style="background: linear-gradient(135deg, #1a3a6a, #0f2a5a);">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    <div class="service-card-image">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop&q=80" alt="Pre-purchase property inspection and building report" loading="lazy">
                     </div>
                     <div class="service-card-body">
                         <h3>Pre-Purchase Reports</h3>
@@ -1480,9 +1500,11 @@
         </div>
     </section>
 
-    <div class="wave-divider wave-gray">
-        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0,0 C360,60 1080,0 1440,48 L1440,60 L0,60 Z"/>
+    <!-- Wave: Services → Expertise -->
+    <div style="position: relative; z-index: 3; line-height: 0; margin-top: -1px;">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="display: block; width: 100%;">
+            <rect width="1440" height="80" fill="#ffffff"/>
+            <path d="M0,25 C180,70 540,0 900,45 C1100,65 1300,20 1440,40 L1440,80 L0,80 Z" fill="rgba(15, 27, 51, 0.95)"/>
         </svg>
     </div>
 
