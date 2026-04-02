@@ -602,16 +602,16 @@ h1, h2, h3, h4, h5, h6 {
     transform: scaleX(1);
 }
 
-/* Feature Cards */
+/* Feature Cards - Orange with White Icons */
 .feature-card {
     display: flex;
     gap: 18px;
     padding: 24px;
-    background: var(--white);
+    background: linear-gradient(135deg, #f37021 0%, #e05e10 100%);
     border-radius: var(--radius-md);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: 1px solid rgba(0,0,0,0.06);
-    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    border: none;
+    box-shadow: 0 4px 16px rgba(243, 112, 33, 0.25);
     position: relative;
     overflow: hidden;
 }
@@ -622,7 +622,7 @@ h1, h2, h3, h4, h5, h6 {
     top: 0;
     bottom: 0;
     width: 4px;
-    background: linear-gradient(180deg, var(--orange), #f59e0b);
+    background: rgba(255, 255, 255, 0.4);
     transform: scaleY(0);
     transform-origin: top;
     transition: transform 0.4s ease;
@@ -631,39 +631,39 @@ h1, h2, h3, h4, h5, h6 {
     transform: scaleY(1);
 }
 .feature-card:hover {
-    background: var(--white);
-    border-color: rgba(243, 112, 33, 0.15);
-    box-shadow: 0 8px 30px rgba(243, 112, 33, 0.12), 0 4px 12px rgba(0,0,0,0.06);
-    transform: translateX(6px);
+    background: linear-gradient(135deg, #e05e10 0%, #c74e08 100%);
+    border-color: transparent;
+    box-shadow: 0 10px 35px rgba(243, 112, 33, 0.35), 0 4px 12px rgba(0,0,0,0.1);
+    transform: translateY(-4px);
 }
 .feature-icon {
     width: 52px;
     height: 52px;
     border-radius: 14px;
-    background: linear-gradient(135deg, rgba(243, 112, 33, 0.15), rgba(243, 112, 33, 0.05));
+    background: rgba(255, 255, 255, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
     transition: all 0.4s ease;
-    border: 1px solid rgba(243, 112, 33, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 .feature-card:hover .feature-icon {
-    background: linear-gradient(135deg, var(--orange), #e05e10);
-    border-color: transparent;
-    box-shadow: 0 4px 16px rgba(243, 112, 33, 0.35);
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
-.feature-icon svg { color: var(--orange); transition: color 0.3s ease; }
+.feature-icon svg { color: var(--white); transition: color 0.3s ease; }
 .feature-card:hover .feature-icon svg { color: var(--white); }
 .feature-card h4 {
     font-size: 1.05rem;
     font-weight: 700;
     margin-bottom: 4px;
-    color: var(--navy);
+    color: var(--white);
 }
 .feature-card p {
     font-size: 0.88rem;
-    color: var(--gray-600);
+    color: rgba(255, 255, 255, 0.85);
 }
 
 /* ===== FORM STYLES ===== */
@@ -1149,7 +1149,10 @@ h1, h2, h3, h4, h5, h6 {
     margin: 16px auto 0;
 }
 
-/* Left-aligned heading underline */
+/* Why Choose Section */
+.why-choose {
+    background: var(--white);
+}
 .why-choose h2::after {
     content: '';
     display: block;
