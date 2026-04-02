@@ -482,7 +482,7 @@
 
         /* ===== PAGE-SPECIFIC STATS BAR ===== */
         .stats-bar {
-            background: linear-gradient(135deg, #f37021 0%, #e05e10 40%, #d4520a 70%, #f37021 100%);
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 40%, #0d1a30 70%, var(--navy) 100%);
             padding: 60px 0;
             position: relative;
             overflow: hidden;
@@ -494,7 +494,7 @@
             left: -20%;
             width: 400px;
             height: 400px;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(243, 112, 33, 0.08) 0%, transparent 70%);
             border-radius: 50%;
             pointer-events: none;
         }
@@ -505,7 +505,7 @@
             right: -10%;
             width: 500px;
             height: 500px;
-            background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(243, 112, 33, 0.06) 0%, transparent 70%);
             border-radius: 50%;
             pointer-events: none;
         }
@@ -520,16 +520,16 @@
         .stat-item {
             padding: 28px 20px;
             position: relative;
-            background: rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.05);
             border-radius: 16px;
-            backdrop-filter: blur(4px);
-            border: 1px solid rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.08);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
         .stat-item:hover {
             transform: translateY(-6px) scale(1.03);
-            background: rgba(255,255,255,0.18);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+            background: rgba(243, 112, 33, 0.08);
+            border-color: rgba(243, 112, 33, 0.2);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.2);
         }
         .stat-number {
             font-family: var(--font-heading);
@@ -538,13 +538,13 @@
             color: var(--white);
             line-height: 1;
             margin-bottom: 10px;
-            text-shadow: 0 3px 15px rgba(0,0,0,0.2);
+            text-shadow: 0 2px 20px rgba(243, 112, 33, 0.3);
         }
-        .stat-number span { color: var(--white); opacity: 0.85; }
+        .stat-number span { color: var(--orange); }
         .stat-label {
-            color: rgba(255,255,255,0.9);
+            color: var(--gray-400);
             font-size: 0.85rem;
-            font-weight: 700;
+            font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 2px;
         }
@@ -1498,7 +1498,7 @@
     <div style="position: relative; z-index: 3; line-height: 0; margin-top: -1px;">
         <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="display: block; width: 100%;">
             <rect width="1440" height="80" fill="#f8fafc"/>
-            <path d="M0,30 C240,80 480,0 720,40 C960,80 1200,10 1440,50 L1440,80 L0,80 Z" fill="#f37021"/>
+            <path d="M0,30 C240,80 480,0 720,40 C960,80 1200,10 1440,50 L1440,80 L0,80 Z" fill="#0f1b33"/>
         </svg>
     </div>
 
@@ -1529,7 +1529,7 @@
     <!-- Wave: Stats Bar → Services -->
     <div style="position: relative; z-index: 3; line-height: 0; margin-top: -1px;">
         <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="display: block; width: 100%;">
-            <rect width="1440" height="80" fill="#f37021"/>
+            <rect width="1440" height="80" fill="#0f1b33"/>
             <path d="M0,20 C360,70 720,0 1080,50 C1260,70 1380,30 1440,40 L1440,80 L0,80 Z" fill="#f8fafc"/>
         </svg>
     </div>
