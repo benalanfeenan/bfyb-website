@@ -620,7 +620,8 @@
         }
         .service-card-img {
             width: 200px;
-            height: 160px;
+            height: 100%;
+            min-height: 160px;
             overflow: hidden;
             flex-shrink: 0;
         }
@@ -628,10 +629,13 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.5s ease;
+            display: block;
+            transition: transform 0.5s ease, filter 0.4s ease;
+            filter: sepia(60%) saturate(200%) hue-rotate(-15deg) brightness(0.9);
         }
         .service-card:hover .service-card-img img {
             transform: scale(1.08);
+            filter: sepia(30%) saturate(150%) hue-rotate(-15deg) brightness(0.95);
         }
         .service-card-body {
             padding: 24px 28px;
