@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pest Control & Home Services Blog | BFYB Armidale</title>
+    <meta name="description" content="Expert tips, guides and advice on pest control, carpet cleaning and flood restoration for Armidale homeowners. Learn about termites, seasonal pests, professional cleaning and emergency restoration.">
+    <meta name="keywords" content="pest control blog, termite guide, carpet cleaning tips, flood restoration advice, Armidale home maintenance, pest prevention">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Bang For Ya Buck Pest Control">
+    <link rel="canonical" href="https://bangforyabuck.com.au/blog/">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Pest Control & Home Services Blog | BFYB Armidale">
+    <meta property="og:description" content="Expert tips and guides on pest control, carpet cleaning and flood restoration for Armidale homeowners.">
+    <meta property="og:url" content="https://bangforyabuck.com.au/blog/">
+    <meta property="og:site_name" content="Bang For Ya Buck">
+    <meta property="og:locale" content="en_AU">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pest Control & Home Services Blog | BFYB Armidale">
+    <meta name="twitter:description" content="Expert tips and guides on pest control, carpet cleaning and flood restoration for Armidale homeowners.">
+
+    <!-- Geo Meta Tags for Local SEO -->
+    <meta name="geo.region" content="AU-NSW">
+    <meta name="geo.placename" content="Armidale">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Shared Stylesheet -->
+    <link rel="stylesheet" href="../styles.css">
+
+    <!-- Blog-Specific Styles -->
+    <style>
+        /* Blog Index Page Specific Styles */
+        .blog-hero {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%);
+            color: var(--white);
+            padding: 80px 20px;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .blog-hero .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .blog-hero h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            color: var(--white);
+            font-family: var(--font-heading);
+        }
+
+        .blog-hero p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.8;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 768px) {
+            .blog-hero h1 {
+                font-size: 2rem;
+            }
+
+            .blog-hero p {
+                font-size: 1rem;
+            }
+        }
+
+        /* Blog Grid */
+        .blog-section {
+            padding: 60px 20px;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 1024px) {
+            .blog-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+        }
+
+        /* Blog Card */
+        .blog-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--gray-200);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .blog-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-8px);
+            border-color: var(--orange);
+        }
+
+        .blog-card-header {
+            padding: 24px;
+            border-bottom: 1px solid var(--gray-200);
+            flex-shrink: 0;
+        }
+
+        .blog-category-tag {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            text-transform: capitalize;
+            color: var(--white);
+        }
+
+        .blog-category-tag.pest-control {
+            background-color: #e74c3c;
+        }
+
+        .blog-category-tag.carpet-cleaning {
+            background-color: #3498db;
+        }
+
+        .blog-category-tag.flood-restoration {
+            background-color: #2ecc71;
+        }
+
+        .blog-category-tag.inspections {
+            background-color: #9b59b6;
+        }
+
+        .blog-card h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--text-dark);
+            font-family: var(--font-heading);
+            margin: 0;
+        }
+
+        .blog-card-body {
+            padding: 24px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card p {
+            font-size: 0.95rem;
+            color: var(--text-body);
+            line-height: 1.7;
+            margin: 0 0 20px 0;
+            flex-grow: 1;
+        }
+
+        .blog-read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--orange);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            align-self: flex-start;
+        }
+
+        .blog-card:hover .blog-read-more {
+            gap: 12px;
+            color: var(--orange-hover);
+        }
+
+        .blog-read-more svg {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+        }
+
+        /* CTA Section Before Footer */
+        .blog-cta-section {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%);
+            color: var(--white);
+            padding: 80px 20px;
+            text-align: center;
+            margin-top: 80px;
+            margin-bottom: 0;
+        }
+
+        .blog-cta-section .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .blog-cta-section h2 {
+            font-size: 2.2rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .blog-cta-section p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 30px;
+        }
+
+        .blog-cta-button {
+            display: inline-block;
+            background-color: var(--orange);
+            color: var(--white);
+            padding: 14px 40px;
+            border-radius: var(--radius-md);
+            font-weight: 700;
+            font-size: 1rem;
+            transition: var(--transition);
+            text-decoration: none;
+            border: 2px solid var(--orange);
+        }
+
+        .blog-cta-button:hover {
+            background-color: var(--orange-hover);
+            border-color: var(--orange-hover);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .blog-cta-section h2 {
+                font-size: 1.6rem;
+            }
+
+            .blog-cta-section p {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+
+    <!-- JSON-LD Structured Data - Blog Listing -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Bang For Ya Buck Blog",
+        "description": "Expert tips, guides and advice on pest control, carpet cleaning and flood restoration for Armidale homeowners.",
+        "url": "https://bangforyabuck.com.au/blog/",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Bang For Ya Buck",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://bangforyabuck.com.au/images/Blue Yellow Modern Creative Initial Font Logo - 1.png"
+            }
+        },
+        "blogPosts": [
+            {
+                "@type": "BlogPosting",
+                "headline": "Common Pests in Armidale: A Seasonal Guide to Pest Control",
+                "url": "https://bangforyabuck.com.au/blog/common-pests-armidale-seasonal-guide.html",
+                "datePublished": "2026-03-01",
+                "author": {"@type": "Organization", "name": "Bang For Ya Buck"},
+                "publisher": {"@type": "Organization", "name": "Bang For Ya Buck"}
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "Termite Warning Signs Every Armidale Homeowner Should Know",
+                "url": "https://bangforyabuck.com.au/blog/termite-warning-signs-armidale.html",
+                "datePublished": "2026-03-02",
+                "author": {"@type": "Organization", "name": "Bang For Ya Buck"},
+                "publisher": {"@type": "Organization", "name": "Bang For Ya Buck"}
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "How to Choose the Best Pest Control Company in Armidale",
+                "url": "https://bangforyabuck.com.au/blog/best-pest-control-company-armidale.html",
+                "datePublished": "2026-03-03",
+                "author": {"@type": "Organization", "name": "Bang For Ya Buck"},
+                "publisher": {"@type": "Organization", "name": "Bang For Ya Buck"}
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "Why Professional Carpet Cleaning in Armidale Beats DIY Every Time",
+                "url": "https://bangforyabuck.com.au/blog/professional-carpet-cleaning-vs-diy-armidale.html",
+                "datePublished": "2026-03-04",
+                "author": {"@type": "Organization", "name": "Bang For Ya Buck"},
+                "publisher": {"@type": "Organization", "name": "Bang For Ya Buck"}
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "How Often Should You Get Your Carpets Professionally Cleaned?",
+                "url": "https://bangforyabuck.com.au/blog/how-often-professional-carpet-cleaning.html",
+                "datePublished": "2026-03-05",
+                "author": {"@type": "Organization", "name": "Bang For Ya Buck"},
+                "publisher": {"@type": "Organization", "name": "Bang For Ya Buck"}
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "Emergency Flood Restoration in Armidale: What to Do When Your Home Floods",
+                "url": "https://bangforyabuck.com.au/blog/emergency-flood-restoration-armidale.html",
+                "datePublished": "2026-03-06",
+                "author": {"@type": "Organization", "name": "Bang For Ya Buck"},
+                "publisher": {"@type": "Organization", "name": "Bang For Ya Buck"}
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "Water Damage vs Flood Damage: Understanding Your Restoration Options in Armidale",
+                "url": "https://bangforyabuck.com.au/blog/water-damage-vs-flood-damage-armidale.html",
+                "datePublished": "2026-03-07",
+                "author": {"@type": "Organization", "name": "Bang For Ya Buck"},
+                "publisher": {"@type": "Organization", "name": "Bang For Ya Buck"}
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "Pre-Purchase Timber Pest Inspections in Armidale: What Buyers Need to Know",
+                "url": "https://bangforyabuck.com.au/blog/pre-purchase-pest-inspection-armidale.html",
+                "datePublished": "2026-03-08",
+                "author": {"@type": "Organization", "name": "Bang For Ya Buck"},
+                "publisher": {"@type": "Organization", "name": "Bang For Ya Buck"}
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "The Complete Guide to Termite Treatment Options in Armidale",
+                "url": "https://bangforyabuck.com.au/blog/complete-guide-termite-treatment-armidale.html",
+                "datePublished": "2026-03-09",
+                "author": {"@type": "Organization", "name": "Bang For Ya Buck"},
+                "publisher": {"@type": "Organization", "name": "Bang For Ya Buck"}
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "Why Pest Control is Essential Before Winter in Armidale",
+                "url": "https://bangforyabuck.com.au/blog/why-pest-control-is-essential-before-winter-armidale.html",
+                "datePublished": "2026-03-30",
+                "author": {"@type": "Organization", "name": "Bang For Ya Buck"},
+                "publisher": {"@type": "Organization", "name": "Bang For Ya Buck"}
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "Professional Carpet Cleaning for Pet Stains and Odour in Armidale",
+                "url": "https://bangforyabuck.com.au/blog/carpet-cleaning-after-pets-armidale.html",
+                "datePublished": "2026-03-30",
+                "author": {"@type": "Organization", "name": "Bang For Ya Buck"},
+                "publisher": {"@type": "Organization", "name": "Bang For Ya Buck"}
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "What to Do After Flood Damage in Armidale - Recovery & Restoration Steps",
+                "url": "https://bangforyabuck.com.au/blog/what-to-do-after-flood-damage-armidale.html",
+                "datePublished": "2026-03-30",
+                "author": {"@type": "Organization", "name": "Bang For Ya Buck"},
+                "publisher": {"@type": "Organization", "name": "Bang For Ya Buck"}
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header & Navigation -->
+    <header class="header" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <a href="../" class="logo" aria-label="Bang For Ya Buck - Home">
+                <img src="../images/Blue Yellow Modern Creative Initial Font Logo - 1.png" alt="Bang For Ya Buck - BFYB Logo" class="logo-img">
+            </a>
+
+            <nav class="main-nav" id="mainNav" aria-label="Primary navigation">
+                <a href="../pest-control.html">Pest Control</a>
+                <a href="../carpet-cleaning.html">Carpet Cleaning</a>
+                <a href="../flood-restoration.html">Flood Restoration</a>
+                <a href="../pre-purchase.html">Pre-Purchase</a>
+                <a href="../pricing.html">Pricing</a>
+                <a href="../quote.html">Request a Quote</a>
+                <a href="../locations.html">Locations</a>
+            </nav>
+
+            <a href="tel:0257650065" class="header-phone" aria-label="Call us at 02 5765 0065">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                02 5765 0065
+            </a>
+
+            <div class="mobile-toggle" id="mobileToggle" onclick="document.getElementById('mainNav').classList.toggle('active')" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sub Header -->
+    <div class="sub-header">
+        <div class="container">
+            <strong>A Better Home Company</strong> &mdash; Read Our Expert Tips & Guides &nbsp;
+            <a href="tel:0257650065">
+                <svg style="vertical-align: middle; margin-right: 4px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                02 5765 0065
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="blog-hero" id="main-content" aria-label="Welcome to BFYB Blog">
+        <div class="container">
+            <h1>BFYB Blog: Tips, Guides & Expert Advice</h1>
+            <p>Learn from Armidale's trusted pest control, carpet cleaning and flood restoration specialists. Discover seasonal pest prevention tips, professional cleaning advice, emergency restoration guidance and more to keep your home protected and fresh.</p>
+        </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="blog-section">
+        <div class="container">
+            <div class="blog-grid">
+                <!-- Blog Post 1 -->
+                <article class="blog-card">
+                    <div class="blog-card-header">
+                        <span class="blog-category-tag pest-control">Pest Control</span>
+                        <h3>Common Pests in Armidale: A Seasonal Guide to Pest Control</h3>
+                    </div>
+                    <div class="blog-card-body">
+                        <p>Armidale's climate creates ideal breeding grounds for different pests throughout the year. Learn which pests are active in each season and how to protect your home before they become a problem.</p>
+                        <a href="common-pests-armidale-seasonal-guide.html" class="blog-read-more">
+                            Read More
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="blog-card">
+                    <div class="blog-card-header">
+                        <span class="blog-category-tag pest-control">Pest Control</span>
+                        <h3>Termite Warning Signs Every Armidale Homeowner Should Know</h3>
+                    </div>
+                    <div class="blog-card-body">
+                        <p>Termites can cause thousands of dollars in damage before you even know they're there. Discover the early warning signs that indicate a termite infestation and what to do if you spot them in your home.</p>
+                        <a href="termite-warning-signs-armidale.html" class="blog-read-more">
+                            Read More
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="blog-card">
+                    <div class="blog-card-header">
+                        <span class="blog-category-tag pest-control">Pest Control</span>
+                        <h3>How to Choose the Best Pest Control Company in Armidale</h3>
+                    </div>
+                    <div class="blog-card-body">
+                        <p>Not all pest control companies are created equal. Learn the key questions to ask, certifications to look for, and guarantees to expect when choosing a pest control provider for your home.</p>
+                        <a href="best-pest-control-company-armidale.html" class="blog-read-more">
+                            Read More
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 4 -->
+                <article class="blog-card">
+                    <div class="blog-card-header">
+                        <span class="blog-category-tag carpet-cleaning">Carpet Cleaning</span>
+                        <h3>Why Professional Carpet Cleaning in Armidale Beats DIY Every Time</h3>
+                    </div>
+                    <div class="blog-card-body">
+                        <p>DIY carpet cleaning might seem cost-effective, but professional equipment and expertise deliver superior results. Discover why hiring professionals protects your carpet investment and your home's health.</p>
+                        <a href="professional-carpet-cleaning-vs-diy-armidale.html" class="blog-read-more">
+                            Read More
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 5 -->
+                <article class="blog-card">
+                    <div class="blog-card-header">
+                        <span class="blog-category-tag carpet-cleaning">Carpet Cleaning</span>
+                        <h3>How Often Should You Get Your Carpets Professionally Cleaned?</h3>
+                    </div>
+                    <div class="blog-card-body">
+                        <p>The frequency of professional carpet cleaning depends on your household's traffic levels and lifestyle. Find out the recommended cleaning schedule to extend your carpet's lifespan and maintain a healthy home.</p>
+                        <a href="how-often-professional-carpet-cleaning.html" class="blog-read-more">
+                            Read More
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 6 -->
+                <article class="blog-card">
+                    <div class="blog-card-header">
+                        <span class="blog-category-tag flood-restoration">Flood Restoration</span>
+                        <h3>Emergency Flood Restoration in Armidale: What to Do When Your Home Floods</h3>
+                    </div>
+                    <div class="blog-card-body">
+                        <p>A flood can strike suddenly, leaving you overwhelmed. Learn the critical first steps to take immediately after a flood, how to minimize damage, and when to call professional restoration services.</p>
+                        <a href="emergency-flood-restoration-armidale.html" class="blog-read-more">
+                            Read More
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 7 -->
+                <article class="blog-card">
+                    <div class="blog-card-header">
+                        <span class="blog-category-tag flood-restoration">Flood Restoration</span>
+                        <h3>Water Damage vs Flood Damage: Understanding Your Restoration Options in Armidale</h3>
+                    </div>
+                    <div class="blog-card-body">
+                        <p>Water damage and flood damage require different restoration approaches. Understand the differences between these types of damage and which specialists you'll need to restore your home properly.</p>
+                        <a href="water-damage-vs-flood-damage-armidale.html" class="blog-read-more">
+                            Read More
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 8 -->
+                <article class="blog-card">
+                    <div class="blog-card-header">
+                        <span class="blog-category-tag inspections">Inspections</span>
+                        <h3>Pre-Purchase Timber Pest Inspections in Armidale: What Buyers Need to Know</h3>
+                    </div>
+                    <div class="blog-card-body">
+                        <p>Before buying a home in Armidale, a professional timber pest inspection is essential. Learn what these inspections reveal, why they're crucial for home buyers, and how they protect your investment.</p>
+                        <a href="pre-purchase-pest-inspection-armidale.html" class="blog-read-more">
+                            Read More
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 9 -->
+                <article class="blog-card">
+                    <div class="blog-card-header">
+                        <span class="blog-category-tag pest-control">Pest Control</span>
+                        <h3>The Complete Guide to Termite Treatment Options in Armidale</h3>
+                    </div>
+                    <div class="blog-card-body">
+                        <p>From chemical barriers to baiting systems, multiple termite treatment options are available. Explore the pros and cons of each approach to determine which treatment is right for your home's specific situation.</p>
+                        <a href="complete-guide-termite-treatment-armidale.html" class="blog-read-more">
+                            Read More
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 10 -->
+                <article class="blog-card">
+                    <div class="blog-card-header">
+                        <span class="blog-category-tag pest-control">Pest Control</span>
+                        <h3>Why Pest Control is Essential Before Winter in Armidale</h3>
+                    </div>
+                    <div class="blog-card-body">
+                        <p>Armidale's cold winters drive pests indoors seeking warmth and shelter. Discover why early autumn treatment prevents winter infestations and saves thousands in potential damage costs from rodents, cockroaches, and termites.</p>
+                        <a href="why-pest-control-is-essential-before-winter-armidale.html" class="blog-read-more">
+                            Read More
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 11 -->
+                <article class="blog-card">
+                    <div class="blog-card-header">
+                        <span class="blog-category-tag carpet-cleaning">Carpet Cleaning</span>
+                        <h3>Professional Carpet Cleaning for Pet Stains and Odour in Armidale</h3>
+                    </div>
+                    <div class="blog-card-body">
+                        <p>Pet stains and odours require professional enzymatic cleaning that DIY methods can't handle. Learn how BFYB's pet-safe treatments eliminate odours at the source, improving air quality and protecting your carpet investment.</p>
+                        <a href="carpet-cleaning-after-pets-armidale.html" class="blog-read-more">
+                            Read More
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 12 -->
+                <article class="blog-card">
+                    <div class="blog-card-header">
+                        <span class="blog-category-tag flood-restoration">Flood Restoration</span>
+                        <h3>What to Do After Flood Damage in Armidale – Recovery & Restoration Steps</h3>
+                    </div>
+                    <div class="blog-card-body">
+                        <p>A step-by-step guide for Armidale homeowners after flooding. Learn immediate recovery actions, professional restoration processes, mould prevention, and critical insurance documentation tips.</p>
+                        <a href="what-to-do-after-flood-damage-armidale.html" class="blog-read-more">
+                            Read More
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section Before Footer -->
+    <section class="blog-cta-section">
+        <div class="container">
+            <h2>Ready to Protect Your Home?</h2>
+            <p>Get professional pest control, carpet cleaning, or flood restoration from Armidale's trusted home services specialist.</p>
+            <a href="../quote.html" class="blog-cta-button">Request a Free Quote</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="../images/Blue Yellow Modern Creative Initial Font Logo - 1.png" alt="Bang For Ya Buck - BFYB Logo" class="footer-logo-img" loading="lazy">
+                    <p>Professional Pest Control, Carpet Cleaning &amp; Flood Restoration services in Armidale and the New England Region. Locally owned and operated, proudly serving our community for over 15 years.</p>
+                </div>
+                <div>
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="../pest-control.html">Pest Control</a></li>
+                        <li><a href="../carpet-cleaning.html">Carpet Cleaning</a></li>
+                        <li><a href="../flood-restoration.html">Flood Restoration</a></li>
+                        <li><a href="../pre-purchase.html">Pre-Purchase Reports</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Service Areas</h4>
+                    <ul>
+                        <li><a href="../locations/armidale.html">Armidale</a></li>
+                        <li><a href="../locations/uralla.html">Uralla</a></li>
+                        <li><a href="../locations/guyra.html">Guyra</a></li>
+                        <li><a href="../locations/black-mountain.html">Black Mountain</a></li>
+                        <li><a href="../locations/walcha.html">Walcha</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <div class="footer-contact-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <a href="tel:0421470028">0421 470 028</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <a href="mailto:admin@bangforyabuck.com.au">admin@bangforyabuck.com.au</a>
+                    </div>
+                    <div class="footer-hours">
+                        <strong>Service Hours</strong>
+                        <p>Mon-Fri: 7am &ndash; 6pm</p>
+                    </div>
+                    <div class="footer-hours">
+                        <strong>Office Hours</strong>
+                        <p>Mon-Fri: 8am &ndash; 5pm</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Bang For Ya Buck. All rights reserved. ABN: XXXXXXXX | Pest Control Licence: XXXXXXXX | <a href="../privacy-policy.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">Privacy Policy</a> | <a href="../terms.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile CTA Bar -->
+    <div class="mobile-cta-bar">
+        <div class="cta-inner">
+            <a href="tel:0257650065" class="cta-call">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                Call Now
+            </a>
+            <a href="../quote.html" class="cta-quote">
+                Free Quote
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Mobile navigation toggle
+        document.getElementById('mobileToggle').addEventListener('click', function() {
+            document.getElementById('mainNav').classList.toggle('active');
+        });
+
+        // Close nav when a link is clicked
+        document.querySelectorAll('.main-nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mainNav').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

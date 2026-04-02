@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | BFYB Armidale</title>
+    <meta name="description" content="Your quote request has been received. We'll be in touch within the hour during business hours.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://bangforyabuck.com.au/thank-you.html">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --navy: #0f1b33;
+            --navy-deep: #0a1225;
+            --orange: #f37021;
+            --green: #5cb85c;
+            --white: #fff;
+            --gray-50: #f8fafc;
+            --gray-200: #e2e8f0;
+            --gray-600: #475569;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-size: cover;
+            background-position: center;
+            padding: 4rem 2rem;
+            color: var(--white);
+            min-height: 280px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .hero .breadcrumb {
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .hero .breadcrumb a {
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .hero .breadcrumb a:hover {
+            color: var(--orange);
+        }
+
+        .hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+        }
+
+        /* Main Container */
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem 4rem;
+        }
+
+        /* Confirmation Card */
+        .confirmation-card {
+            background-color: var(--white);
+            border-radius: 12px;
+            padding: 3rem 2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            animation: slideIn 0.6s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .checkmark-container {
+            margin-bottom: 2rem;
+            animation: scaleIn 0.6s ease-out 0.2s both;
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .checkmark-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #e8f5e9;
+            border-radius: 50%;
+        }
+
+        .checkmark-icon svg {
+            width: 48px;
+            height: 48px;
+            color: var(--green);
+            stroke-width: 2;
+        }
+
+        .confirmation-card h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+
+        .confirmation-message {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            color: var(--gray-600);
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .urgent-contact {
+            background-color: var(--gray-50);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--orange);
+        }
+
+        .urgent-contact p {
+            font-size: 0.9rem;
+            color: var(--gray-600);
+            margin-bottom: 0.75rem;
+        }
+
+        .urgent-contact a {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--orange);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .urgent-contact a:hover {
+            color: var(--navy);
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--orange), #e05e10);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(243, 112, 33, 0.3);
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(243, 112, 33, 0.4);
+        }
+
+        .back-button:active {
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 3rem 1.5rem;
+                min-height: 200px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .main-container {
+                padding: 2rem 1.5rem 3rem;
+            }
+
+            .confirmation-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .confirmation-card h1 {
+                font-size: 1.8rem;
+            }
+
+            .confirmation-message {
+                font-size: 1rem;
+            }
+
+            body {
+                padding-bottom: 80px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+
+            .main-container {
+                padding: 1.5rem 1rem 3rem;
+            }
+
+            .confirmation-card {
+                padding: 1.5rem 1rem;
+            }
+
+            .confirmation-card h1 {
+                font-size: 1.5rem;
+            }
+
+            .checkmark-icon {
+                width: 70px;
+                height: 70px;
+            }
+
+            .checkmark-icon svg {
+                width: 40px;
+                height: 40px;
+            }
+
+            .confirmation-message {
+                font-size: 0.95rem;
+            }
+
+            .back-button {
+                width: 100%;
+            }
+        }
+    </style>
+    <!-- Google Analytics 4 - Replace GA_MEASUREMENT_ID with your actual ID -->
+    <!-- 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    -->
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- Top Bar -->
+    <div class="top-bar" role="banner"><div class="container"><div class="top-bar-left"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg><span>Proudly Supporting Local Communities</span></div><div class="top-bar-right"><a href="locations.html">Local Offices</a><a href="quote.html">Contact Us</a></div></div></div>
+
+    <!-- Header -->
+    <header class="header" role="navigation"><div class="container">
+    <a href="index.html" class="logo"><img src="images/Blue Yellow Modern Creative Initial Font Logo - 1.png" alt="BFYB Logo" class="logo-img"></a>
+    <nav class="main-nav" id="mainNav"><a href="pest-control.html">Pest Control</a><a href="carpet-cleaning.html">Carpet Cleaning</a><a href="flood-restoration.html">Flood Restoration</a><a href="pre-purchase.html">Pre-Purchase</a><a href="pricing.html">Pricing</a><a href="quote.html">Request a Quote</a><a href="locations.html">Locations</a><a href="blog/">Blog</a></nav>
+    <a href="tel:0257650065" class="header-phone"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>02 5765 0065</a>
+    <div class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></div>
+    </div></header>
+
+    <div class="sub-header"><div class="container"><strong>A Better Home Company</strong> &mdash; Protect Yourself Today! &nbsp;<a href="tel:0257650065"><svg style="vertical-align:middle;margin-right:4px" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>02 5765 0065</a></div></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="main-content" style="background: linear-gradient(135deg, rgba(15, 27, 51, 0.82) 0%, rgba(10, 18, 37, 0.78) 100%), url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center center;">
+        <div class="hero-content">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / <span>Thank You</span>
+            </div>
+            <h1>Quote Request Received</h1>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <div class="confirmation-card">
+            <!-- Checkmark Icon -->
+            <div class="checkmark-container">
+                <div class="checkmark-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Thank You Message -->
+            <h1>Thank You!</h1>
+            <p class="confirmation-message">
+                Your quote request has been received. We'll be in touch within the hour during business hours.
+            </p>
+
+            <!-- Urgent Contact Info -->
+            <div class="urgent-contact">
+                <p><strong>Need us urgently?</strong></p>
+                <p>Call us directly for immediate assistance:</p>
+                <a href="tel:0257650065">02 5765 0065</a>
+            </div>
+
+            <!-- Back to Home Button -->
+            <a href="index.html" class="back-button">Back to Home</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer"><div class="container"><div class="footer-grid">
+    <div class="footer-brand"><img src="images/Blue Yellow Modern Creative Initial Font Logo - 1.png" alt="BFYB Logo" class="footer-logo-img" loading="lazy"><p>Professional Pest Control, Carpet Cleaning &amp; Flood Restoration services in Armidale and the New England Region. Locally owned and operated, proudly serving our community for over 15 years.</p></div>
+    <div><h4>Our Services</h4><ul><li><a href="pest-control.html">Pest Control</a></li><li><a href="carpet-cleaning.html">Carpet Cleaning</a></li><li><a href="flood-restoration.html">Flood Restoration</a></li><li><a href="pre-purchase.html">Pre-Purchase Reports</a></li><li><a href="blog/">Blog</a></li></ul></div>
+    <div><h4>Service Areas</h4><ul><li><a href="locations/armidale.html">Armidale</a></li><li><a href="locations/uralla.html">Uralla</a></li><li><a href="locations/guyra.html">Guyra</a></li><li><a href="locations/black-mountain.html">Black Mountain</a></li><li><a href="locations/walcha.html">Walcha</a></li></ul></div>
+    <div><h4>Contact</h4><div class="footer-contact-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><a href="tel:0421470028">0421 470 028</a></div><div class="footer-contact-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg><a href="mailto:admin@bangforyabuck.com.au">admin@bangforyabuck.com.au</a></div><div class="footer-hours"><strong>Service Hours</strong><p>Mon-Fri: 7am &ndash; 6pm</p></div><div class="footer-hours"><strong>Office Hours</strong><p>Mon-Fri: 8am &ndash; 5pm</p></div></div>
+    </div><div class="footer-bottom">&copy; 2026 Bang For Ya Buck. All rights reserved. ABN: XXXXXXXX | Pest Control Licence: XXXXXXXX | <a href="privacy-policy.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">Privacy Policy</a> | <a href="terms.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">Terms of Service</a></div></div></footer>
+
+    <div class="mobile-cta-bar"><a href="tel:0257650065"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>Call Now - 02 5765 0065</a></div>
+
+    <script>
+        // Standardized JS
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileToggle = document.getElementById('mobileToggle');
+            const mainNav = document.getElementById('mainNav');
+            if (mobileToggle) {
+                mobileToggle.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    mainNav.classList.toggle('active');
+                });
+                mainNav.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileToggle.classList.remove('active');
+                        mainNav.classList.remove('active');
+                    });
+                });
+            }
+
+            // Header scroll effect
+            window.addEventListener('scroll', () => {
+                document.querySelector('.header').classList.toggle('scrolled', window.scrollY > 50);
+            });
+        });
+    </script>
+</body>
+</html>

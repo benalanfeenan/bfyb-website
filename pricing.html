@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing & Service Rates | BFYB Armidale</title>
+    <meta name="description" content="Competitive pricing for pest control, carpet cleaning & flood restoration in Armidale, NSW. Transparent quotes, no hidden fees. Request a free quote today.">
+    <meta name="keywords" content="pricing, pest control pricing, carpet cleaning pricing, flood restoration pricing, service costs, quotes, Armidale NSW">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Bang For Ya Buck">
+    <link rel="canonical" href="https://bangforyabuck.com.au/pricing">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Pricing & Service Rates | BFYB Armidale">
+    <meta property="og:description" content="Transparent pricing for pest control, carpet cleaning & flood restoration services. Get your free quote from BFYB Armidale today.">
+    <meta property="og:url" content="https://bangforyabuck.com.au/pricing">
+    <meta property="og:site_name" content="Bang For Ya Buck">
+    <meta property="og:locale" content="en_AU">
+    <meta property="og:image" content="https://bangforyabuck.com.au/images/Blue Yellow Modern Creative Initial Font Logo - 1.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pricing & Service Rates | BFYB Armidale">
+    <meta name="twitter:description" content="Competitive pricing for pest control, carpet cleaning & flood restoration. Free quotes available. Call 02 5765 0065.">
+    <meta name="twitter:image" content="https://bangforyabuck.com.au/images/Blue Yellow Modern Creative Initial Font Logo - 1.png">
+
+    <!-- Geo Meta Tags for Local SEO -->
+    <meta name="geo.region" content="AU-NSW">
+    <meta name="geo.placename" content="Armidale">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* ===== PRICING PAGE HERO ===== */
+        .pricing-hero {
+            background: linear-gradient(135deg, rgba(15, 27, 51, 0.88) 0%, rgba(10, 18, 37, 0.85) 100%),
+                        url('https://images.pexels.com/photos/6195273/pexels-photo-6195273.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80');
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            padding: 5rem 2rem;
+            text-align: center;
+            color: var(--white);
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pricing-hero h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .pricing-hero h1 span {
+            color: var(--orange);
+        }
+
+        .pricing-hero p {
+            font-size: 1.2rem;
+            color: var(--gray-50);
+            max-width: 700px;
+        }
+
+        /* ===== PRICING CONTENT SECTIONS ===== */
+        .pricing-content {
+            padding: 4rem 2rem;
+            background: var(--white);
+        }
+
+        .pricing-content:nth-child(even) {
+            background: var(--gray-50);
+        }
+
+        /* ===== COLOUR-CODED SERVICE THEMES ===== */
+
+        /* PEST CONTROL - Orange Theme */
+        .theme-pest {
+            background: linear-gradient(180deg, #fff7ed 0%, #fff 60%) !important;
+            border-top: 5px solid var(--orange);
+        }
+        .theme-pest .category-title { color: #c2410c; }
+        .theme-pest .category-title::after { background: linear-gradient(90deg, var(--orange), #fb923c); }
+        .theme-pest .min-fee-badge { background: linear-gradient(135deg, var(--orange), #ea580c); }
+        .theme-pest .pricing-table-group h4 { border-left-color: var(--orange); color: #9a3412; }
+        .theme-pest .pricing-table thead th { background: linear-gradient(135deg, #ea580c, var(--orange)); }
+        .theme-pest .pricing-table .price-cell { color: #c2410c; }
+        .theme-pest .pricing-table tbody tr:hover { background: rgba(243, 112, 33, 0.06); }
+
+        /* CARPET CLEANING - Dark/Black Theme */
+        .theme-carpet {
+            background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%) !important;
+            border-top: 5px solid #e2e8f0;
+            color: #e2e8f0;
+        }
+        .theme-carpet .category-title { color: #f1f5f9; }
+        .theme-carpet .category-title::after { background: linear-gradient(90deg, #94a3b8, #e2e8f0); }
+        .theme-carpet .min-fee-badge { background: linear-gradient(135deg, #334155, #1e293b); border: 1px solid #475569; }
+        .theme-carpet .pricing-table-group h4 { border-left-color: #94a3b8; color: #cbd5e1; }
+        .theme-carpet .pricing-table { background: #0f172a; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); }
+        .theme-carpet .pricing-table thead th { background: linear-gradient(135deg, #334155, #1e293b); color: #f1f5f9; }
+        .theme-carpet .pricing-table tbody td { color: #cbd5e1; border-bottom-color: #1e293b; }
+        .theme-carpet .pricing-table .price-cell { color: #fbbf24; }
+        .theme-carpet .pricing-table .note-cell { color: #94a3b8; }
+        .theme-carpet .pricing-table .tbq { color: #fbbf24; }
+        .theme-carpet .pricing-table tbody tr:hover { background: rgba(148, 163, 184, 0.08); }
+        .theme-carpet .category-subtitle { color: #94a3b8; }
+        .theme-carpet .surcharge-note { background: rgba(251, 191, 36, 0.1); border-left-color: #fbbf24; color: #cbd5e1; }
+        .theme-carpet .surcharge-note strong { color: #fbbf24; }
+        .theme-carpet .condition-card { background: #0f172a; border-top-color: #475569; }
+        .theme-carpet .condition-card h5 { color: #f1f5f9; }
+        .theme-carpet .condition-card .multiplier { color: #fbbf24; }
+        .theme-carpet .condition-card p { color: #94a3b8; }
+        .theme-carpet .condition-card.bronze { border-top-color: #cd7f32; }
+        .theme-carpet .condition-card.silver { border-top-color: #c0c0c0; }
+        .theme-carpet .condition-card.gold { border-top-color: #fbbf24; }
+
+        /* UPHOLSTERY - Charcoal/Warm Grey Theme */
+        .theme-upholstery {
+            background: linear-gradient(180deg, #f8f5f1 0%, #fff 60%) !important;
+            border-top: 5px solid #78716c;
+        }
+        .theme-upholstery .category-title { color: #44403c; }
+        .theme-upholstery .category-title::after { background: linear-gradient(90deg, #78716c, #a8a29e); }
+        .theme-upholstery .min-fee-badge { background: linear-gradient(135deg, #57534e, #44403c); }
+        .theme-upholstery .pricing-table-group h4 { border-left-color: #78716c; color: #57534e; }
+        .theme-upholstery .pricing-table thead th { background: linear-gradient(135deg, #57534e, #44403c); }
+        .theme-upholstery .pricing-table .price-cell { color: #b45309; }
+        .theme-upholstery .pricing-table tbody tr:hover { background: rgba(120, 113, 108, 0.06); }
+        .theme-upholstery .category-subtitle { color: #78716c; }
+
+        /* WATER RESTORATION - Blue Theme */
+        .theme-water {
+            background: linear-gradient(180deg, #eff6ff 0%, #fff 60%) !important;
+            border-top: 5px solid #2563eb;
+        }
+        .theme-water .category-title { color: #1e40af; }
+        .theme-water .category-title::after { background: linear-gradient(90deg, #2563eb, #60a5fa); }
+        .theme-water .min-fee-badge { background: linear-gradient(135deg, #2563eb, #1d4ed8); }
+        .theme-water .pricing-table-group h4 { border-left-color: #2563eb; color: #1e40af; }
+        .theme-water .pricing-table thead th { background: linear-gradient(135deg, #1d4ed8, #2563eb); }
+        .theme-water .pricing-table .price-cell { color: #1d4ed8; }
+        .theme-water .pricing-table tbody tr:hover { background: rgba(37, 99, 235, 0.04); }
+
+        /* Pricing nav colour pills */
+        .pricing-nav a[href="#pest-control"] { border-color: var(--orange); color: #c2410c; }
+        .pricing-nav a[href="#pest-control"]:hover,
+        .pricing-nav a[href="#pest-control"].active { background: var(--orange); color: #fff; border-color: var(--orange); }
+
+        .pricing-nav a[href="#carpet-cleaning"] { border-color: #334155; color: #1e293b; }
+        .pricing-nav a[href="#carpet-cleaning"]:hover,
+        .pricing-nav a[href="#carpet-cleaning"].active { background: #1e293b; color: #fff; border-color: #1e293b; }
+
+        .pricing-nav a[href="#upholstery"] { border-color: #78716c; color: #57534e; }
+        .pricing-nav a[href="#upholstery"]:hover,
+        .pricing-nav a[href="#upholstery"].active { background: #57534e; color: #fff; border-color: #57534e; }
+
+        .pricing-nav a[href="#water-restoration"] { border-color: #2563eb; color: #1d4ed8; }
+        .pricing-nav a[href="#water-restoration"]:hover,
+        .pricing-nav a[href="#water-restoration"].active { background: #2563eb; color: #fff; border-color: #2563eb; }
+
+        .category-group {
+            max-width: 1200px;
+            margin: 0 auto 3rem;
+        }
+
+        .category-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--navy);
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .category-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--orange), #f59e0b);
+            border-radius: 2px;
+        }
+
+        .category-subtitle {
+            font-size: 0.95rem;
+            color: var(--gray-600);
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        /* ===== PRICING TABLES ===== */
+        .pricing-table-group {
+            margin-bottom: 2.5rem;
+        }
+
+        .pricing-table-group h4 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+            border-left: 4px solid var(--orange);
+        }
+
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+            margin-bottom: 1rem;
+        }
+
+        .pricing-table thead th {
+            background: var(--navy);
+            color: var(--white);
+            padding: 14px 18px;
+            text-align: left;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .pricing-table tbody td {
+            padding: 14px 18px;
+            border-bottom: 1px solid var(--gray-200);
+            font-size: 0.95rem;
+            color: var(--gray-700);
+        }
+
+        .pricing-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .pricing-table tbody tr:hover {
+            background: rgba(243, 112, 33, 0.04);
+        }
+
+        .pricing-table .price-cell {
+            font-weight: 800;
+            color: var(--orange);
+            font-size: 1.05rem;
+            white-space: nowrap;
+        }
+
+        .pricing-table .note-cell {
+            font-size: 0.85rem;
+            color: var(--gray-600);
+            font-style: italic;
+        }
+
+        .pricing-table .tbq {
+            color: var(--navy);
+            font-weight: 700;
+            font-style: italic;
+        }
+
+        /* MINIMUM FEE BADGES */
+        .min-fee-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--navy), var(--navy-deep));
+            color: var(--white);
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-top: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* CONDITION MULTIPLIERS */
+        .condition-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .condition-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 1.2rem;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            border-top: 4px solid var(--orange);
+        }
+
+        .condition-card.bronze { border-top-color: #cd7f32; }
+        .condition-card.silver { border-top-color: #c0c0c0; }
+        .condition-card.gold { border-top-color: #ffd700; }
+
+        .condition-card h5 {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--navy);
+            margin-bottom: 0.3rem;
+        }
+
+        .condition-card .multiplier {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--orange);
+            margin-bottom: 0.3rem;
+        }
+
+        .condition-card p {
+            font-size: 0.85rem;
+            color: var(--gray-600);
+        }
+
+        /* SURCHARGE NOTE */
+        .surcharge-note {
+            background: rgba(243, 112, 33, 0.08);
+            border-left: 4px solid var(--orange);
+            padding: 1rem 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+            color: var(--gray-700);
+        }
+
+        /* SECTION NAVIGATION */
+        .pricing-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1.5rem 2rem;
+            background: var(--white);
+            border-bottom: 2px solid var(--gray-200);
+            flex-wrap: wrap;
+            position: sticky;
+            top: 70px;
+            z-index: 90;
+        }
+
+        .pricing-nav a {
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: var(--navy);
+            text-decoration: none;
+            background: var(--gray-50);
+            border: 2px solid var(--gray-200);
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .pricing-nav a:hover,
+        .pricing-nav a.active {
+            color: var(--white);
+        }
+
+        /* EXISTING SECTIONS KEPT */
+        .included-section {
+            padding: 80px 0;
+            background: var(--gray-50);
+        }
+
+        .included-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+
+        .included-item { text-align: center; }
+        .included-icon { font-size: 2.5rem; margin-bottom: 16px; display: inline-block; }
+        .included-item h3 { font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 12px; }
+        .included-item p { color: var(--gray-600); font-size: 0.9rem; line-height: 1.6; }
+
+        .payment-section { padding: 80px 0; background: var(--white); }
+        .payment-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 30px; }
+        .payment-option { background: var(--gray-50); border: 2px solid var(--gray-200); border-radius: 12px; padding: 32px 24px; text-align: center; transition: all 0.3s; }
+        .payment-option:hover { border-color: var(--orange); transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+        .payment-icon { font-size: 2.5rem; margin-bottom: 16px; display: block; }
+        .payment-option h3 { font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+        .payment-option p { color: var(--gray-600); font-size: 0.85rem; }
+
+        .guarantee-section { padding: 80px 0; background: linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%); position: relative; overflow: hidden; }
+        .guarantee-section::before { content: ''; position: absolute; top: -50%; right: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(243, 112, 33, 0.08) 0%, transparent 70%); border-radius: 50%; pointer-events: none; }
+        .guarantee-content { position: relative; text-align: center; max-width: 800px; margin: 0 auto; }
+        .guarantee-badge { font-size: 3rem; margin-bottom: 20px; display: block; }
+        .guarantee-section h2 { font-size: 2.5rem; font-weight: 900; color: var(--white); margin-bottom: 16px; }
+        .guarantee-section h2 span { color: var(--orange); }
+        .guarantee-section p { color: var(--gray-300); font-size: 1.05rem; line-height: 1.8; margin-bottom: 28px; }
+        .guarantee-section p strong { color: var(--orange); font-weight: 700; }
+        .guarantee-terms { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; padding: 32px; margin-top: 32px; text-align: center; }
+        .guarantee-terms h3 { color: var(--white); font-size: 1.1rem; margin-bottom: 20px; }
+        .guarantee-terms ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+        .guarantee-terms li { color: var(--gray-300); font-size: 0.95rem; position: relative; padding-left: 24px; }
+        .guarantee-terms li::before { content: '✓'; position: absolute; left: 0; color: var(--green); font-weight: 900; font-size: 1.1rem; }
+
+        .faq-section { padding: 80px 0; background: var(--gray-50); }
+        .faq-container { max-width: 800px; margin: 0 auto; }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .pricing-hero { padding: 3rem 1rem; min-height: 220px; }
+            .pricing-hero h1 { font-size: 2rem; }
+            .pricing-hero p { font-size: 1rem; }
+
+            .pricing-content { padding: 2.5rem 1rem; }
+            .category-title { font-size: 1.5rem; }
+
+            .pricing-table { font-size: 0.85rem; }
+            .pricing-table thead th { padding: 10px 12px; font-size: 0.75rem; }
+            .pricing-table tbody td { padding: 10px 12px; }
+
+            .pricing-nav { gap: 0.5rem; padding: 1rem; }
+            .pricing-nav a { font-size: 0.75rem; padding: 0.5rem 0.8rem; }
+
+            .condition-cards { grid-template-columns: 1fr; }
+
+            .included-section, .payment-section, .guarantee-section, .faq-section { padding: 50px 0; }
+            .payment-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+            .guarantee-section h2 { font-size: 1.8rem; }
+            .guarantee-terms { padding: 24px; }
+
+            body { padding-bottom: 80px; }
+        }
+
+        @media (max-width: 480px) {
+            .pricing-hero h1 { font-size: 1.6rem; }
+
+            .pricing-table thead th { padding: 8px 10px; }
+            .pricing-table tbody td { padding: 8px 10px; font-size: 0.85rem; }
+            .pricing-table .price-cell { font-size: 0.95rem; }
+
+            .pricing-nav a { font-size: 0.7rem; padding: 0.4rem 0.7rem; }
+
+            .payment-grid { grid-template-columns: 1fr; }
+            .guarantee-section h2 { font-size: 1.5rem; }
+        }
+
+        /* Table scroll wrapper for mobile */
+        .table-scroll {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin-bottom: 1rem;
+        }
+
+        .table-scroll .pricing-table {
+            min-width: 500px;
+        }
+    </style>
+
+    <!-- JSON-LD Structured Data - LocalBusiness Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "LocalBusiness",
+      "name": "Bang For Ya Buck",
+      "description": "Professional pest control, carpet cleaning, and flood restoration services in Armidale, NSW.",
+      "telephone": "02 5765 0065",
+      "email": "admin@bangforyabuck.com.au",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Armidale",
+        "addressRegion": "NSW",
+        "addressCountry": "AU"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "10"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "BFYB Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Pest Control Services"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Carpet Cleaning Services"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Flood Restoration Services"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Pre-Purchase Inspections"
+            }
+          }
+        ]
+      },
+      "url": "https://bangforyabuck.com.au/pricing"
+    }
+    </script>
+
+    <!-- FAQ Structured Data for Rich Snippets -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Do your prices include GST?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, all prices quoted are inclusive of GST. There are no hidden charges or additional fees beyond what we quote you in writing."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do you offer discounts for multiple services?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, we offer package discounts when you combine multiple services. Contact us for a custom quote on combined pest control, carpet cleaning and restoration services."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is there a travel charge?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "For water restoration, travel is charged at $1.70/km and $84/hr technician time, up to 45km from Armidale CBD. For pest control and carpet cleaning within our standard service area, there is typically no extra travel charge."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are the minimum fees?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Pest control has a minimum fee of $182, carpet cleaning $289, and upholstery cleaning $289. The exception is Flea End-of-Lease with Carpet ($157) which is exempt from the minimum when a bundle discount is active."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What do the carpet condition multipliers mean?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We assess your carpet condition on arrival. Bronze (1.0x) is for minimal staining at the base room rate. Silver (1.30x) is for heavy soiling, staining, or pet stains with odour. Gold (2.11x) is a restoration-level clean for extremely stained carpets. Your technician will assess and confirm before starting work."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What areas do you service?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We provide services to Armidale, Uralla, Guyra, Black Mountain, Walcha and surrounding areas in the New England Region. Check our locations page for details or call for service availability in your area."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do you have emergency services?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, we offer 24/7 emergency services for flood restoration and water damage. Call 02 5765 0065 for immediate assistance with any emergency situation."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How much does pest control cost in Armidale?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Pest control in Armidale starts from a minimum fee of $182. Standard 2-bedroom treatments begin at $209. Pricing varies based on the type of pest, severity of infestation, property size, and the specific treatment required."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the minimum fee for carpet cleaning in Armidale?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The minimum fee for carpet cleaning in Armidale is $289. Individual rooms start from $54 for a standard bedroom and $78 for a living room. Pricing depends on room count, carpet condition, and any add-on treatments."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does BFYB offer price matching in Armidale?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, BFYB is committed to offering the best value in Armidale. We will match or beat competitor written quotes for the same service level. Bring in a local competitor's quote and we'll do our best to match it while ensuring the same quality of service you expect from BFYB."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Are there any travel charges for services outside Armidale?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "For water restoration services, travel is charged at $1.70/km and $84/hr technician time, up to 45km from Armidale CBD. For standard pest control and carpet cleaning within our regular service areas (Armidale, Uralla, Black Mountain, Guyra, and surrounding suburbs), there is no additional travel charge."
+                }
+            }
+        ]
+    }
+    </script>
+    <!-- Google Analytics 4 - Replace GA_MEASUREMENT_ID with your actual ID -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    -->
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- TOP BAR -->
+    <div class="top-bar" role="banner"><div class="container"><div class="top-bar-left"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg><span>Proudly Supporting Local Communities</span></div><div class="top-bar-right"><a href="locations.html">Local Offices</a><a href="quote.html">Contact Us</a></div></div></div>
+
+    <!-- HEADER -->
+    <header class="header" role="navigation"><div class="container">
+    <a href="index.html" class="logo"><img src="images/Blue Yellow Modern Creative Initial Font Logo - 1.png" alt="BFYB Logo" class="logo-img"></a>
+    <nav class="main-nav" id="mainNav"><a href="pest-control.html">Pest Control</a><a href="carpet-cleaning.html">Carpet Cleaning</a><a href="flood-restoration.html">Flood Restoration</a><a href="pre-purchase.html">Pre-Purchase</a><a href="pricing.html" class="active">Pricing</a><a href="quote.html">Request a Quote</a><a href="locations.html">Locations</a><a href="blog/">Blog</a></nav>
+    <a href="tel:0257650065" class="header-phone"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>02 5765 0065</a>
+    <div class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></div>
+    </div></header>
+
+    <!-- SUB HEADER -->
+    <div class="sub-header"><div class="container"><strong>A Better Home Company</strong> &mdash; Protect Yourself Today! &nbsp;<a href="tel:0257650065"><svg style="vertical-align:middle;margin-right:4px" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>02 5765 0065</a></div></div>
+
+    <!-- PRICING HERO -->
+    <section class="pricing-hero" id="main-content">
+        <h1 class="animate-on-scroll">Our Service <span>Pricing</span></h1>
+        <p class="animate-on-scroll">Honest, transparent rates for all your pest control, carpet cleaning &amp; restoration needs</p>
+    </section>
+
+    <!-- PRICING NAVIGATION -->
+    <nav class="pricing-nav">
+        <a href="#pest-control" class="active">Pest Control</a>
+        <a href="#carpet-cleaning">Carpet Cleaning</a>
+        <a href="#upholstery">Upholstery</a>
+        <a href="#water-restoration">Water Restoration</a>
+    </nav>
+
+    <!-- ============================================================ -->
+    <!-- PEST CONTROL PRICING -->
+    <!-- ============================================================ -->
+    <section class="pricing-content theme-pest" id="pest-control">
+        <div class="category-group">
+            <h2 class="category-title animate-on-scroll">Pest Control Services</h2>
+            <div class="min-fee-badge">Minimum fee: $182.00</div>
+
+            <!-- External Spider Treatment -->
+            <div class="pricing-table-group animate-on-scroll">
+                <h4>External Spider Treatment</h4>
+                <div class="table-scroll">
+                <table class="pricing-table">
+                    <thead><tr><th>Service</th><th>Price</th></tr></thead>
+                    <tbody>
+                        <tr><td>2BR Single + Up to 2 Bay Garage</td><td class="price-cell">$209.00</td></tr>
+                        <tr><td>3BR Single + Up to 2 Bay Garage</td><td class="price-cell">$285.00</td></tr>
+                        <tr><td>4BR Single + Up to 2 Bay Garage</td><td class="price-cell">$311.00</td></tr>
+                        <tr><td>5BR Single + Up to 2 Bay Garage</td><td class="price-cell">$363.00</td></tr>
+                        <tr><td class="note-cell">Large Rural Property</td><td class="tbq">Quote Required</td></tr>
+                    </tbody>
+                </table>
+                </div>
+                <p class="category-subtitle">Add-ons: Outdoor Area +$39 | Detached Garage Outside +$22 | Detached Garage Inside +$22 | Double Storey +$65</p>
+            </div>
+
+            <!-- Internal Spider Treatment -->
+            <div class="pricing-table-group animate-on-scroll">
+                <h4>Internal Spider Treatment</h4>
+                <div class="table-scroll">
+                <table class="pricing-table">
+                    <thead><tr><th>Service</th><th>Price</th></tr></thead>
+                    <tbody>
+                        <tr><td>2BR Single + Up to 2 Bay Garage</td><td class="price-cell">$142.00</td></tr>
+                        <tr><td>3BR Single + Up to 2 Bay Garage</td><td class="price-cell">$142.00</td></tr>
+                        <tr><td>4BR Single + Up to 2 Bay Garage</td><td class="price-cell">$168.00</td></tr>
+                        <tr><td>5BR Single + Up to 2 Bay Garage</td><td class="price-cell">$220.00</td></tr>
+                        <tr><td class="note-cell">Large Rural Property</td><td class="tbq">Quote Required</td></tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+
+            <!-- Cockroach Treatment -->
+            <div class="pricing-table-group animate-on-scroll">
+                <h4>Cockroach Treatment</h4>
+                <div class="table-scroll">
+                <table class="pricing-table">
+                    <thead><tr><th>Service</th><th>Price</th><th>Notes</th></tr></thead>
+                    <tbody>
+                        <tr><td>Low Infestation (Kitchen &amp; Bathrooms)</td><td class="price-cell">$236.00</td><td></td></tr>
+                        <tr><td>High Infestation (Full Property)</td><td class="price-cell">$305.00</td><td class="note-cell">Second treatment may be required</td></tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+
+            <!-- Rodent Treatment -->
+            <div class="pricing-table-group animate-on-scroll">
+                <h4>Rodent Treatment</h4>
+                <div class="table-scroll">
+                <table class="pricing-table">
+                    <thead><tr><th>Service</th><th>Price</th></tr></thead>
+                    <tbody>
+                        <tr><td>2BR Property</td><td class="price-cell">$189.00</td></tr>
+                        <tr><td>3BR Property</td><td class="price-cell">$234.00</td></tr>
+                        <tr><td>4BR Property</td><td class="price-cell">$286.00</td></tr>
+                        <tr><td>5BR Property</td><td class="price-cell">$377.00</td></tr>
+                        <tr><td class="note-cell">Large Rural Property</td><td class="tbq">Quote Required</td></tr>
+                    </tbody>
+                </table>
+                </div>
+                <p class="category-subtitle">Add-ons: Labour with Other Pest Control +$67 | Standalone Labour +$182 | Bait Top-up +$4.50/bait</p>
+            </div>
+
+            <!-- Ant Treatment -->
+            <div class="pricing-table-group animate-on-scroll">
+                <h4>Ant Treatment</h4>
+                <div class="table-scroll">
+                <table class="pricing-table">
+                    <thead><tr><th>Service</th><th>Price</th></tr></thead>
+                    <tbody>
+                        <tr><td>Low Infestation</td><td class="price-cell">$236.00</td></tr>
+                        <tr><td>High Infestation</td><td class="price-cell">$305.00</td></tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+
+            <!-- Flea Treatment -->
+            <div class="pricing-table-group animate-on-scroll">
+                <h4>Flea Treatment</h4>
+                <div class="table-scroll">
+                <table class="pricing-table">
+                    <thead><tr><th>Service</th><th>Price</th><th>Notes</th></tr></thead>
+                    <tbody>
+                        <tr><td>End of Lease with Carpet</td><td class="price-cell">$157.00</td><td class="note-cell">Exempt from min fee when bundle discount active</td></tr>
+                        <tr><td>End of Lease No Carpet</td><td class="price-cell">$189.00</td><td></td></tr>
+                        <tr><td>Active Fleas (per treatment)</td><td class="price-cell">$364.00</td><td class="note-cell">2 treatments required</td></tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+
+            <!-- Bed Bug Treatment -->
+            <div class="pricing-table-group animate-on-scroll">
+                <h4>Bed Bug Treatment</h4>
+                <div class="table-scroll">
+                <table class="pricing-table">
+                    <thead><tr><th>Service</th><th>Price</th><th>Notes</th></tr></thead>
+                    <tbody>
+                        <tr><td>Inspection Only</td><td class="price-cell">$309.00</td><td></td></tr>
+                        <tr><td>Treatment</td><td class="tbq">Quote Required</td><td></td></tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+
+            <!-- Wasp Treatment -->
+            <div class="pricing-table-group animate-on-scroll">
+                <h4>Wasp Treatment</h4>
+                <div class="table-scroll">
+                <table class="pricing-table">
+                    <thead><tr><th>Service</th><th>Price</th></tr></thead>
+                    <tbody>
+                        <tr><td>Wasp Nest Removal &amp; Treatment</td><td class="tbq">Quote Required</td></tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+
+            <!-- Termite Inspections & Treatment -->
+            <div class="pricing-table-group animate-on-scroll">
+                <h4>Termite Inspections &amp; Treatment</h4>
+                <div class="table-scroll">
+                <table class="pricing-table">
+                    <thead><tr><th>Service</th><th>Price</th></tr></thead>
+                    <tbody>
+                        <tr><td>Routine Termite Inspection</td><td class="price-cell">$395.00</td></tr>
+                        <tr><td>Pre-Purchase Termite Inspection</td><td class="price-cell">$445.00</td></tr>
+                        <tr><td>Trelona Station</td><td class="price-cell">$160.00</td></tr>
+                        <tr><td>Termite Treatment Per Post</td><td class="price-cell">$169.00</td></tr>
+                        <tr><td>Home Guard PB Termite Barrier</td><td class="price-cell">$22.00</td></tr>
+                        <tr><td>Collars for Pipes/Electrical (All Sizes)</td><td class="price-cell">$27.00</td></tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+
+            <!-- Service Fees & Add-ons -->
+            <div class="pricing-table-group animate-on-scroll">
+                <h4>Service Fees &amp; Add-ons</h4>
+                <div class="table-scroll">
+                <table class="pricing-table">
+                    <thead><tr><th>Item</th><th>Price</th></tr></thead>
+                    <tbody>
+                        <tr><td>Service Fee (45min or less)</td><td class="price-cell">$189.00</td></tr>
+                        <tr><td>Personal Protective Equipment (PPE)</td><td class="price-cell">$37.00</td></tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- CARPET CLEANING PRICING -->
+    <!-- ============================================================ -->
+    <section class="pricing-content theme-carpet" id="carpet-cleaning">
+        <div class="category-group">
+            <h2 class="category-title animate-on-scroll">Carpet Cleaning Services</h2>
+            <div class="min-fee-badge">Minimum fee: $289.00</div>
+
+            <!-- Room Rates -->
+            <div class="pricing-table-group animate-on-scroll">
+                <h4>Room Rates</h4>
+                <div class="table-scroll">
+                <table class="pricing-table">
+                    <thead><tr><th>Room Type</th><th>Size</th><th>Price</th></tr></thead>
+                    <tbody>
+                        <tr><td>Bedroom</td><td>4x4m</td><td class="price-cell">$54.00</td></tr>
+                        <tr><td>Large Bedroom</td><td>5x5m</td><td class="price-cell">$78.00</td></tr>
+                        <tr><td>Living Room</td><td>5x5m</td><td class="price-cell">$78.00</td></tr>
+                        <tr><td>Large Living Room</td><td>6x6m</td><td class="price-cell">$104.00</td></tr>
+                        <tr><td>Dining Room</td><td>4x4m</td><td class="price-cell">$54.00</td></tr>
+                        <tr><td>Standard Hallway</td><td>3x1m</td><td class="price-cell">$33.00</td></tr>
+                        <tr><td>Double Hallway</td><td>6x1m</td><td class="price-cell">$66.00</td></tr>
+                        <tr><td>Triple Hallway</td><td>9x1m</td><td class="price-cell">$99.00</td></tr>
+                        <tr><td>Long Hallway</td><td>12x1m</td><td class="price-cell">$132.00</td></tr>
+                        <tr><td>Walk-in Robe</td><td>2x2m</td><td class="price-cell">$20.00</td></tr>
+                        <tr><td>Large Walk-in Robe</td><td>3x3m</td><td class="price-cell">$39.00</td></tr>
+                        <tr><td>Stairs</td><td>16 steps or less</td><td class="price-cell">$78.00</td></tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+
+            <!-- Add-ons -->
+            <div class="pricing-table-group animate-on-scroll">
+                <h4>Add-ons</h4>
+                <div class="table-scroll">
+                <table class="pricing-table">
+                    <thead><tr><th>Item</th><th>Price</th><th>Unit</th></tr></thead>
+                    <tbody>
+                        <tr><td>Pre-Vacuuming</td><td class="price-cell">$17.00</td><td>per room</td></tr>
+                        <tr><td>Anti-Microbial Treatment (300ml)</td><td class="price-cell">$39.00</td><td>flat fee</td></tr>
+                        <tr><td>Extra Product for Stain Removal</td><td class="price-cell">$39.00</td><td>flat fee</td></tr>
+                        <tr><td>Service Fee (auto-added per job)</td><td class="price-cell">$33.00</td><td>flat fee</td></tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+
+            <!-- Condition Multipliers -->
+            <div class="pricing-table-group animate-on-scroll">
+                <h4>Carpet Condition Multipliers</h4>
+                <p class="category-subtitle">Final price depends on the condition of your carpet at time of cleaning.</p>
+                <div class="condition-cards">
+                    <div class="condition-card bronze">
+                        <h5>Bronze</h5>
+                        <div class="multiplier">1.0x</div>
+                        <p>Minimal to no staining</p>
+                    </div>
+                    <div class="condition-card silver">
+                        <h5>Silver</h5>
+                        <div class="multiplier">1.30x</div>
+                        <p>Heavy soiling, staining or pet stains with odour</p>
+                    </div>
+                    <div class="condition-card gold">
+                        <h5>Gold</h5>
+                        <div class="multiplier">2.11x</div>
+                        <p>Restoration clean &mdash; extremely stained</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="surcharge-note animate-on-scroll">
+                <strong>Note:</strong> A 1.2% surcharge applies to the total carpet cleaning cost.
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- UPHOLSTERY PRICING -->
+    <!-- ============================================================ -->
+    <section class="pricing-content theme-upholstery" id="upholstery">
+        <div class="category-group">
+            <h2 class="category-title animate-on-scroll">Upholstery Cleaning</h2>
+            <div class="min-fee-badge">Minimum fee: $289.00</div>
+
+            <div class="pricing-table-group animate-on-scroll">
+                <h4>Upholstery Rates</h4>
+                <div class="table-scroll">
+                <table class="pricing-table">
+                    <thead><tr><th>Item</th><th>Price</th></tr></thead>
+                    <tbody>
+                        <tr><td>2-Seater Lounge</td><td class="price-cell">$194.00</td></tr>
+                        <tr><td>3-Seater Lounge</td><td class="price-cell">$291.00</td></tr>
+                        <tr><td>4-Seater Lounge</td><td class="price-cell">$388.00</td></tr>
+                        <tr><td>5-Seater Lounge</td><td class="price-cell">$485.00</td></tr>
+                        <tr><td>6-Seater Lounge</td><td class="price-cell">$582.00</td></tr>
+                        <tr><td>Single Armchair</td><td class="price-cell">$97.00</td></tr>
+                        <tr><td>Ottoman</td><td class="price-cell">$97.00</td></tr>
+                    </tbody>
+                </table>
+                </div>
+                <p class="category-subtitle">Per seating position rate: $97.00</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- WATER RESTORATION PRICING -->
+    <!-- ============================================================ -->
+    <section class="pricing-content theme-water" id="water-restoration">
+        <div class="category-group">
+            <h2 class="category-title animate-on-scroll">Water Restoration Services</h2>
+
+            <!-- Inspection -->
+            <div class="pricing-table-group animate-on-scroll">
+                <h4>Initial Inspection &amp; Assessment</h4>
+                <div class="table-scroll">
+                <table class="pricing-table">
+                    <thead><tr><th>Service</th><th>Price</th><th>Includes</th></tr></thead>
+                    <tbody>
+                        <tr><td>Inspection &amp; Assessment</td><td class="price-cell">$182.00</td><td>Thermal imaging, moisture readings, scope of works emailed within 24hrs</td></tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+
+            <!-- Extraction -->
+            <div class="pricing-table-group animate-on-scroll">
+                <h4>Water Extraction</h4>
+                <div class="table-scroll">
+                <table class="pricing-table">
+                    <thead><tr><th>Service</th><th>Price</th><th>Includes</th></tr></thead>
+                    <tbody>
+                        <tr><td>1 Technician</td><td class="price-cell">$289.00</td><td>Includes anti-microbial treatment</td></tr>
+                        <tr><td>2 Technicians</td><td class="price-cell">$409.00</td><td>Includes anti-microbial treatment</td></tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+
+            <!-- Drying Equipment -->
+            <div class="pricing-table-group animate-on-scroll">
+                <h4>Drying Equipment Hire (per day, minimum 3 days)</h4>
+                <div class="table-scroll">
+                <table class="pricing-table">
+                    <thead><tr><th>Equipment</th><th>Price/Day</th></tr></thead>
+                    <tbody>
+                        <tr><td>Dri-Pod Air Mover</td><td class="price-cell">$41.00</td></tr>
+                        <tr><td>Axil High Velocity Air Mover</td><td class="price-cell">$41.00</td></tr>
+                        <tr><td>Centrifugal Air Mover</td><td class="price-cell">$41.00</td></tr>
+                        <tr><td>Slim Line Air Mover</td><td class="price-cell">$41.00</td></tr>
+                        <tr><td>Dehumidifier 45L</td><td class="price-cell">$90.00</td></tr>
+                        <tr><td>Dehumidifier 70L</td><td class="price-cell">$110.00</td></tr>
+                        <tr><td>Air Scrubber</td><td class="price-cell">$90.00</td></tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+
+            <!-- Materials -->
+            <div class="pricing-table-group animate-on-scroll">
+                <h4>Materials</h4>
+                <div class="table-scroll">
+                <table class="pricing-table">
+                    <thead><tr><th>Item</th><th>Price</th></tr></thead>
+                    <tbody>
+                        <tr><td>Zip Wall Rails &amp; Clamps (per pair)</td><td class="price-cell">$30.00</td></tr>
+                        <tr><td>Plastic Sheet 3m wide (per metre)</td><td class="price-cell">$19.00</td></tr>
+                        <tr><td>Air Scrubber Filter (if used &gt;7 days)</td><td class="price-cell">$77.00</td></tr>
+                        <tr><td>Mask Filters (per pair)</td><td class="price-cell">$45.00</td></tr>
+                        <tr><td>Tape (per metre)</td><td class="price-cell">$1.50</td></tr>
+                        <tr><td>PPE (per unit)</td><td class="price-cell">$33.00</td></tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+
+            <!-- Labour -->
+            <div class="pricing-table-group animate-on-scroll">
+                <h4>Labour Rates (per technician per hour)</h4>
+                <div class="table-scroll">
+                <table class="pricing-table">
+                    <thead><tr><th>Period</th><th>Rate</th></tr></thead>
+                    <tbody>
+                        <tr><td>Mon&ndash;Fri Standard (8am&ndash;5pm)</td><td class="price-cell">$120.00/hr</td></tr>
+                        <tr><td>Mon&ndash;Fri After Hours</td><td class="price-cell">$168.00/hr</td></tr>
+                        <tr><td>Saturday (all day)</td><td class="price-cell">$199.00/hr</td></tr>
+                        <tr><td>Sunday (all day)</td><td class="price-cell">$229.00/hr</td></tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+
+            <!-- Travel -->
+            <div class="pricing-table-group animate-on-scroll">
+                <h4>Travel</h4>
+                <div class="table-scroll">
+                <table class="pricing-table">
+                    <thead><tr><th>Item</th><th>Rate</th></tr></thead>
+                    <tbody>
+                        <tr><td>Distance Cost</td><td class="price-cell">$1.70/km</td></tr>
+                        <tr><td>Technician Travel Time</td><td class="price-cell">$84.00/hr</td></tr>
+                        <tr><td>Max Distance</td><td>45km from Armidale CBD</td></tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+
+            <!-- Admin Fees -->
+            <div class="pricing-table-group animate-on-scroll">
+                <h4>Administration Fees</h4>
+                <div class="table-scroll">
+                <table class="pricing-table">
+                    <thead><tr><th>Item</th><th>Price</th></tr></thead>
+                    <tbody>
+                        <tr><td>Administration / Organisation Fee</td><td class="price-cell">$77.00</td></tr>
+                        <tr><td>Report Fee (thermal imaging &amp; moisture readings)</td><td class="price-cell">$264.00</td></tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT'S INCLUDED SECTION -->
+    <section class="included-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2>What's Always <span>Included</span></h2>
+                <p>Every service comes with these benefits as standard</p>
+            </div>
+            <div class="included-grid">
+                <div class="included-item animate-on-scroll">
+                    <div class="included-icon">✓</div>
+                    <h3>Free Initial Assessment</h3>
+                    <p>We evaluate your specific needs at no cost to provide the best solution for your situation.</p>
+                </div>
+                <div class="included-item animate-on-scroll">
+                    <div class="included-icon">📋</div>
+                    <h3>Written Quote Before Work</h3>
+                    <p>Know exactly what you'll pay before we start. No surprises, no hidden charges.</p>
+                </div>
+                <div class="included-item animate-on-scroll">
+                    <div class="included-icon">🛡</div>
+                    <h3>12-Month Warranty</h3>
+                    <p>Our work is backed by a comprehensive 12-month warranty for your peace of mind.</p>
+                </div>
+                <div class="included-item animate-on-scroll">
+                    <div class="included-icon">👨</div>
+                    <h3>Licensed Technicians</h3>
+                    <p>All our work is performed by fully licensed and certified pest control professionals.</p>
+                </div>
+                <div class="included-item animate-on-scroll">
+                    <div class="included-icon">🌿</div>
+                    <h3>Eco-Friendly Products</h3>
+                    <p>We use environmentally responsible products that are safe for your family and pets.</p>
+                </div>
+                <div class="included-item animate-on-scroll">
+                    <div class="included-icon">🔄</div>
+                    <h3>Follow-Up Service If Needed</h3>
+                    <p>If issues persist, we'll return and make it right without additional charges.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAYMENT OPTIONS SECTION -->
+    <section class="payment-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2>Payment <span>Options</span></h2>
+                <p>We offer flexible payment methods for your convenience</p>
+            </div>
+            <div class="payment-grid">
+                <div class="payment-option animate-on-scroll">
+                    <div class="payment-icon">💵</div>
+                    <h3>Cash</h3>
+                </div>
+                <div class="payment-option animate-on-scroll">
+                    <div class="payment-icon">💳</div>
+                    <h3>Card</h3>
+                    <p>Visa, Mastercard, AMEX</p>
+                </div>
+                <div class="payment-option animate-on-scroll">
+                    <div class="payment-icon">🏦</div>
+                    <h3>Bank Transfer</h3>
+                </div>
+                <div class="payment-option animate-on-scroll">
+                    <div class="payment-icon">📅</div>
+                    <h3>Payment Plans</h3>
+                    <p>Available for larger jobs</p>
+                </div>
+                <div class="payment-option animate-on-scroll">
+                    <div class="payment-icon">📧</div>
+                    <h3>Invoice</h3>
+                    <p>For commercial clients</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICE MATCH GUARANTEE -->
+    <section class="guarantee-section">
+        <div class="container">
+            <div class="guarantee-content animate-on-scroll">
+                <div class="guarantee-badge">🛡</div>
+                <h2>Price Match <span>Guarantee</span></h2>
+                <p><strong>Found a cheaper quote? We'll match it.</strong></p>
+                <p>Bang For Your Buck is committed to providing the best value in Armidale. If you find a comparable quote from a local competitor for the same service, we'll match their price. That's our promise to you.</p>
+                <div class="guarantee-terms">
+                    <h3>Guarantee Terms:</h3>
+                    <ul>
+                        <li>Must be a comparable service from a licensed local competitor</li>
+                        <li>Quote must be in writing from the same service area</li>
+                        <li>We'll match the price or beat it by 5%</li>
+                        <li>Applies to new customers and repeat customers</li>
+                        <li>Valid for 30 days from our quote date</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2>Frequently Asked <span>Questions</span></h2>
+                <p>Find answers to common questions about our pricing and services</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">
+                        <span>Do your prices include GST?</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, all prices quoted are inclusive of GST. There are no hidden charges or additional fees beyond what we quote you in writing.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">
+                        <span>Do you offer discounts for multiple services?</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer package discounts when you combine multiple services. Contact us for a custom quote on combined pest control, carpet cleaning and restoration services.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">
+                        <span>Is there a travel charge?</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>For water restoration, travel is charged at $1.70/km and $84/hr technician time, up to 45km from Armidale CBD. For pest control and carpet cleaning within our standard service area, there is typically no extra travel charge.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">
+                        <span>What are the minimum fees?</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Pest control has a minimum fee of $182, carpet cleaning $289, and upholstery cleaning $289. The exception is Flea End-of-Lease with Carpet ($157) which is exempt from the minimum when a bundle discount is active.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">
+                        <span>What do the carpet condition multipliers mean?</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We assess your carpet condition on arrival. Bronze (1.0x) is for minimal staining at the base room rate. Silver (1.30x) is for heavy soiling, staining, or pet stains with odour. Gold (2.11x) is a restoration-level clean for extremely stained carpets. Your technician will assess and confirm before starting work.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">
+                        <span>What areas do you service?</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We provide services to Armidale, Uralla, Guyra, Black Mountain, Walcha and surrounding areas in the New England Region. Check our locations page for details or call for service availability in your area.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">
+                        <span>Do you have emergency services?</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer 24/7 emergency services for flood restoration and water damage. Call 02 5765 0065 for immediate assistance with any emergency situation.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">
+                        <span>How much does pest control cost in Armidale?</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Pest control in Armidale starts from a minimum fee of $182. Standard 2-bedroom treatments begin at $209. Pricing varies based on the type of pest, severity of infestation, property size, and the specific treatment required. Our licensed technicians will provide a detailed quote. Visit our <a href="pest-control.html" style="color: var(--orange); font-weight: 600;">pest control page</a> for more information about our services.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">
+                        <span>What is the minimum fee for carpet cleaning in Armidale?</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The minimum fee for carpet cleaning in Armidale is $289. Individual rooms start from $54 for a standard bedroom and $78 for a living room. Pricing depends on room count, carpet condition, and any add-on treatments. Check our <a href="carpet-cleaning.html" style="color: var(--orange); font-weight: 600;">carpet cleaning page</a> for detailed pricing and our free quote builder.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">
+                        <span>Does BFYB offer price matching in Armidale?</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, BFYB is committed to offering the best value in Armidale. We will match or beat competitor written quotes for the same service level. Bring in a local competitor's quote and we'll do our best to match it while ensuring the same quality of service you expect from BFYB.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">
+                        <span>Are there any travel charges for services outside Armidale?</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>For water restoration services, travel is charged at $1.70/km and $84/hr technician time, up to 45km from Armidale CBD. For standard pest control and carpet cleaning within our regular service areas (Armidale, Uralla, Black Mountain, Guyra, and surrounding suburbs), there is no additional travel charge. Contact us for specific pricing in Walcha or Glen Innes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="animate-on-scroll" style="text-align: center;">
+                <h2>Ready to protect your <span>home?</span></h2>
+                <p>Get a free quote today and discover why Armidale trusts Bang For Your Buck</p>
+                <div class="cta-buttons">
+                    <a href="quote.html" class="btn-orange">Request a Free Quote</a>
+                    <a href="tel:0257650065" class="btn-outline-white">Call Now - 02 5765 0065</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer"><div class="container"><div class="footer-grid">
+    <div class="footer-brand"><img src="images/Blue Yellow Modern Creative Initial Font Logo - 1.png" alt="BFYB Logo" class="footer-logo-img" loading="lazy"><p>Professional Pest Control, Carpet Cleaning &amp; Flood Restoration services in Armidale and the New England Region. Locally owned and operated, proudly serving our community for over 15 years.</p></div>
+    <div><h4>Our Services</h4><ul><li><a href="pest-control.html">Pest Control</a></li><li><a href="carpet-cleaning.html">Carpet Cleaning</a></li><li><a href="flood-restoration.html">Flood Restoration</a></li><li><a href="pre-purchase.html">Pre-Purchase Reports</a></li><li><a href="blog/">Blog</a></li></ul></div>
+    <div><h4>Service Areas</h4><ul><li><a href="locations/armidale.html">Armidale</a></li><li><a href="locations/uralla.html">Uralla</a></li><li><a href="locations/guyra.html">Guyra</a></li><li><a href="locations/black-mountain.html">Black Mountain</a></li><li><a href="locations/walcha.html">Walcha</a></li></ul></div>
+    <div><h4>Contact</h4><div class="footer-contact-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><a href="tel:0421470028">0421 470 028</a></div><div class="footer-contact-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg><a href="mailto:admin@bangforyabuck.com.au">admin@bangforyabuck.com.au</a></div><div class="footer-hours"><strong>Service Hours</strong><p>Mon-Fri: 7am &ndash; 6pm</p></div><div class="footer-hours"><strong>Office Hours</strong><p>Mon-Fri: 8am &ndash; 5pm</p></div></div>
+    </div><div class="footer-bottom">&copy; 2026 Bang For Ya Buck. All rights reserved. ABN: XXXXXXXX | Pest Control Licence: XXXXXXXX | <a href="privacy-policy.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">Privacy Policy</a> | <a href="terms.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">Terms of Service</a></div></div></footer>
+
+    <!-- MOBILE CTA BAR -->
+    <div class="mobile-cta-bar"><a href="tel:0257650065"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>Call Now - 02 5765 0065</a></div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mainNav = document.getElementById('mainNav');
+
+        if (mobileToggle) {
+            mobileToggle.addEventListener('click', () => {
+                mobileToggle.classList.toggle('active');
+                mainNav.classList.toggle('active');
+            });
+
+            mainNav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileToggle.classList.remove('active');
+                    mainNav.classList.remove('active');
+                });
+            });
+        }
+
+        // FAQ accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            if (question) {
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    faqItems.forEach(otherItem => otherItem.classList.remove('active'));
+                    if (!isActive) item.classList.add('active');
+                });
+            }
+        });
+
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            document.querySelector('.header').classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Pricing nav active state on scroll
+        const sections = document.querySelectorAll('.pricing-content[id]');
+        const navLinks = document.querySelectorAll('.pricing-nav a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 200;
+                if (window.scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth scroll for pricing nav
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = document.querySelector(link.getAttribute('href'));
+                if (target) {
+                    const offset = 130;
+                    window.scrollTo({
+                        top: target.offsetTop - offset,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

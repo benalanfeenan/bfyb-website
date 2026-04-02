@@ -1,0 +1,2406 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Locations & Coverage Areas | BFYB Armidale</title>
+    <meta name="description" content="Service locations and coverage areas for BFYB in Armidale, Uralla, Guyra, Walcha, Glen Innes & New England Region. Find your local service area.">
+    <meta name="keywords" content="service locations, coverage areas, Armidale, Uralla, Guyra, Walcha, Glen Innes, New England Region, local services, service radius">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Bang For Ya Buck">
+    <link rel="canonical" href="https://bangforyabuck.com.au/locations">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Service Locations & Coverage Areas | BFYB Armidale">
+    <meta property="og:description" content="BFYB service locations in Armidale, Uralla, Guyra, Walcha, Glen Innes & New England Region. Check if your area is covered.">
+    <meta property="og:url" content="https://bangforyabuck.com.au/locations">
+    <meta property="og:site_name" content="Bang For Ya Buck">
+    <meta property="og:locale" content="en_AU">
+    <meta property="og:image" content="https://bangforyabuck.com.au/images/Blue Yellow Modern Creative Initial Font Logo - 1.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Service Locations & Coverage Areas | BFYB Armidale">
+    <meta name="twitter:description" content="Check BFYB service locations in Armidale, Uralla, Guyra, Walcha, Glen Innes & New England. Find your coverage area.">
+    <meta name="twitter:image" content="https://bangforyabuck.com.au/images/Blue Yellow Modern Creative Initial Font Logo - 1.png">
+
+    <!-- Geo Meta Tags for Local SEO -->
+    <meta name="geo.region" content="AU-NSW">
+    <meta name="geo.placename" content="Armidale">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --navy: #0f1b33;
+            --navy-deep: #0a1225;
+            --orange: #f37021;
+            --orange-hover: #e05e10;
+            --green: #5cb85c;
+            --green-bg: #4caf50;
+            --white: #ffffff;
+            --gray-50: #f8fafc;
+            --gray-100: #f1f5f9;
+            --gray-200: #e2e8f0;
+            --gray-300: #cbd5e1;
+            --gray-400: #94a3b8;
+            --gray-600: #475569;
+            --gray-700: #334155;
+            --text-dark: #1a1a2e;
+            --text-body: #4a5568;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-body);
+            background-color: var(--white);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            font-weight: 700;
+        }
+
+        /* ===== SHARED HEADER (from design system) ===== */
+        .top-bar {
+            background-color: var(--navy-deep);
+            color: var(--white);
+            padding: 12px 20px;
+            font-size: 0.875rem;
+        }
+
+        .top-bar .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-bar-left {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .top-bar-left svg {
+            flex-shrink: 0;
+        }
+
+        .top-bar-right {
+            display: flex;
+            gap: 30px;
+        }
+
+        .top-bar-right a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .top-bar-right a:hover {
+            color: var(--orange);
+        }
+
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .header .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 18px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .logo {
+            flex-shrink: 0;
+            height: 50px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            height: 100%;
+            width: auto;
+        }
+
+        .main-nav {
+            display: flex;
+            gap: 35px;
+            align-items: center;
+            flex: 1;
+        }
+
+        .main-nav a {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--text-dark);
+            text-decoration: none;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+            letter-spacing: 0.6px;
+            padding-bottom: 4px;
+            border-bottom: 2px solid transparent;
+        }
+
+        .main-nav a:hover {
+            color: var(--orange);
+            border-bottom-color: var(--orange);
+        }
+
+        .main-nav a.active {
+            color: var(--orange);
+            border-bottom-color: var(--orange);
+        }
+
+        .header-phone {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: linear-gradient(135deg, var(--orange), var(--orange-hover));
+            color: var(--white);
+            padding: 10px 18px;
+            border-radius: 6px;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .header-phone:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(243, 112, 33, 0.35);
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-dark);
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .mobile-toggle span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: var(--text-dark);
+            transition: all 0.3s ease;
+        }
+
+        .sub-header {
+            background-color: var(--orange);
+            color: var(--white);
+            padding: 12px 20px;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .sub-header .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .sub-header a {
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        /* ===== FOOTER (standardized) ===== */
+        .footer {
+            background-color: var(--navy-deep);
+            color: var(--white);
+            padding: 80px 20px 40px;
+            margin-top: 120px;
+        }
+
+        .footer .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .footer-brand {
+            grid-column: 1;
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--gray-300);
+        }
+
+        .footer-logo-img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .footer h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer ul li a {
+            color: var(--gray-300);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer ul li a:hover {
+            color: var(--orange);
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+        }
+
+        .footer-contact-item svg {
+            flex-shrink: 0;
+        }
+
+        .footer-contact-item a {
+            color: var(--gray-300);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-contact-item a:hover {
+            color: var(--orange);
+        }
+
+        .footer-hours {
+            margin-bottom: 12px;
+        }
+
+        .footer-hours strong {
+            display: block;
+            margin-bottom: 4px;
+            color: var(--white);
+        }
+
+        .footer-hours p {
+            color: var(--gray-300);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .footer-bottom {
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            font-size: 0.875rem;
+            color: var(--gray-400);
+        }
+
+        .mobile-cta-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--orange);
+            padding: 12px 20px;
+            z-index: 99;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        }
+
+        .mobile-cta-bar a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%);
+            color: var(--white);
+            padding: 140px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: rgba(243, 112, 33, 0.05);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.2rem, 6vw, 3.8rem);
+            color: var(--white);
+            margin-bottom: 20px;
+            animation: slideInDown 0.8s ease-out;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--gray-200);
+            margin-bottom: 35px;
+            animation: slideInUp 0.8s ease-out 0.2s both;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            animation: slideInUp 0.8s ease-out 0.4s both;
+            margin-top: 30px;
+        }
+
+        .badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .badge-number {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--orange);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .badge-label {
+            font-size: 0.9rem;
+            color: var(--gray-300);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* ===== SECTIONS ===== */
+        section {
+            padding: 120px 20px;
+        }
+
+        .section-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
+            margin-bottom: 60px;
+            text-align: center;
+            color: var(--navy);
+            position: relative;
+            font-weight: 800;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 80px;
+            height: 5px;
+            background: var(--orange);
+            margin: 20px auto 0;
+            display: block;
+            border-radius: 3px;
+            animation: expandWidth 0.8s ease-out 0.3s both;
+        }
+
+        @keyframes expandWidth {
+            from {
+                width: 0;
+                opacity: 0;
+            }
+            to {
+                width: 80px;
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .subtitle {
+            color: var(--text-body);
+            font-size: 1.05rem;
+            text-align: center;
+            margin-bottom: 50px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        /* ===== SCROLL ANIMATIONS ===== */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .scroll-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .animation-delay-1 { transition-delay: 0.1s; }
+        .animation-delay-2 { transition-delay: 0.2s; }
+        .animation-delay-3 { transition-delay: 0.3s; }
+        .animation-delay-4 { transition-delay: 0.4s; }
+        .animation-delay-5 { transition-delay: 0.5s; }
+        .animation-delay-6 { transition-delay: 0.6s; }
+        .animation-delay-7 { transition-delay: 0.7s; }
+
+        /* ===== SERVICE AREA MAP VISUALIZATION ===== */
+        .map-visualization {
+            background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%);
+            border-radius: 16px;
+            padding: 80px 40px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 80px;
+        }
+
+        .map-visualization::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(243, 112, 33, 0.1) 0%, rgba(243, 112, 33, 0) 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .map-wrapper {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+
+        .map-center-dot {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--orange), var(--orange-hover));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            box-shadow: 0 0 40px rgba(243, 112, 33, 0.4);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 0 40px rgba(243, 112, 33, 0.4);
+            }
+            50% {
+                box-shadow: 0 0 80px rgba(243, 112, 33, 0.6);
+            }
+        }
+
+        .map-location-pin {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .location-pin-marker {
+            width: 50px;
+            height: 50px;
+            background: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .map-location-pin:hover .location-pin-marker {
+            transform: scale(1.15);
+            box-shadow: 0 8px 25px rgba(243, 112, 33, 0.4);
+        }
+
+        .map-location-label {
+            margin-top: 8px;
+            color: var(--white);
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-align: center;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            white-space: nowrap;
+        }
+
+        .map-location-distance {
+            color: var(--gray-300);
+            font-size: 0.75rem;
+            margin-top: 2px;
+        }
+
+        /* ===== LOCATION CARDS ===== */
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .location-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 1px solid var(--gray-200);
+        }
+
+        .location-card:hover {
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+            transform: translateY(-5px);
+        }
+
+        .location-card.featured {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%);
+            color: var(--white);
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            border: none;
+        }
+
+        .featured-left h3 {
+            color: var(--white);
+            font-size: 2.2rem;
+            margin: 15px 0;
+        }
+
+        .featured-badge {
+            display: inline-block;
+            background: var(--orange);
+            color: var(--white);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 15px;
+        }
+
+        .featured-left .distance {
+            color: var(--orange);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .location-info {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .location-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .location-card h3 {
+            color: var(--navy);
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .location-card.featured h3 {
+            color: var(--white);
+        }
+
+        .distance {
+            color: var(--orange);
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .population {
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+
+        .location-card.featured .location-info {
+            color: var(--gray-200);
+        }
+
+        .location-card.featured .location-info strong {
+            color: var(--white);
+        }
+
+        .service-level {
+            display: inline-block;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        .service-level.same-day {
+            background: rgba(92, 184, 92, 0.15);
+            color: var(--green);
+        }
+
+        .service-level.next-day {
+            background: rgba(243, 112, 33, 0.15);
+            color: var(--orange);
+        }
+
+        .service-level.scheduled {
+            background: rgba(94, 163, 235, 0.15);
+            color: #5ea3eb;
+        }
+
+        .service-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 15px 0;
+        }
+
+        .service-tag {
+            display: inline-block;
+            background: var(--gray-100);
+            color: var(--text-dark);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .location-card.featured .service-tag {
+            background: rgba(255,255,255,0.2);
+            color: var(--white);
+        }
+
+        .service-list-featured {
+            list-style: none;
+        }
+
+        .service-list-featured li {
+            padding: 8px 0;
+            color: var(--gray-200);
+            font-size: 0.95rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .service-list-featured li:last-child {
+            border-bottom: none;
+        }
+
+        .tagline {
+            font-style: italic;
+            color: var(--gray-400);
+            font-size: 0.9rem;
+            margin: 15px 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--orange);
+            color: var(--white);
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+            font-size: 0.95rem;
+        }
+
+        .cta-button:hover {
+            background: var(--orange-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(243, 112, 33, 0.3);
+        }
+
+        /* ===== SERVICE AVAILABILITY TABLE ===== */
+        .services-table-wrapper {
+            overflow-x: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--white);
+        }
+
+        table thead {
+            background: var(--navy-deep);
+            color: var(--white);
+        }
+
+        table th {
+            padding: 18px;
+            text-align: left;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid var(--gray-200);
+        }
+
+        table td {
+            padding: 18px;
+            border-bottom: 1px solid var(--gray-200);
+            font-size: 0.95rem;
+        }
+
+        table tbody tr:hover {
+            background: var(--gray-50);
+        }
+
+        table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .location-name {
+            font-weight: 700;
+            color: var(--navy);
+        }
+
+        .checkmark {
+            color: var(--green);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .response-time {
+            color: var(--orange);
+            font-weight: 700;
+        }
+
+        /* ===== RESPONSE TIMES ===== */
+        .response-times {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .response-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-left: 4px solid var(--orange);
+        }
+
+        .response-location {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 20px;
+        }
+
+        .response-item {
+            margin-bottom: 25px;
+        }
+
+        .response-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .response-type {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .response-time-value {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--orange);
+            margin-bottom: 10px;
+        }
+
+        .time-bar {
+            height: 8px;
+            background: var(--gray-200);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .time-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--orange), var(--orange-hover));
+            border-radius: 4px;
+            transition: width 0.8s ease-out;
+        }
+
+        /* ===== UNCERTAINTY CTA ===== */
+        .uncertainty-cta {
+            background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%);
+            color: var(--white);
+            padding: 50px;
+            border-radius: 16px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .uncertainty-cta::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: rgba(243, 112, 33, 0.05);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .uncertainty-cta > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .uncertainty-cta h3 {
+            color: var(--white);
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .uncertainty-cta p {
+            font-size: 1.1rem;
+            color: var(--gray-200);
+            max-width: 700px;
+            margin: 0 auto 30px;
+            line-height: 1.8;
+        }
+
+        .uncertainty-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .uncertainty-button {
+            display: inline-block;
+            padding: 14px 30px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .uncertainty-button.primary {
+            background: var(--orange);
+            color: var(--white);
+        }
+
+        .uncertainty-button.primary:hover {
+            background: var(--orange-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(243, 112, 33, 0.3);
+        }
+
+        .uncertainty-button.secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .uncertainty-button.secondary:hover {
+            background: var(--white);
+            color: var(--navy);
+        }
+
+        /* ===== LOCAL KNOWLEDGE ===== */
+        .local-knowledge {
+            text-align: center;
+        }
+
+        .local-knowledge h3 {
+            color: var(--navy);
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .local-knowledge > p {
+            font-size: 1.1rem;
+            color: var(--text-body);
+            max-width: 800px;
+            margin: 0 auto 50px;
+            line-height: 1.8;
+        }
+
+        .regional-challenges {
+            text-align: left;
+            background: var(--gray-50);
+            padding: 40px;
+            border-radius: 12px;
+            margin-top: 40px;
+        }
+
+        .challenges-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .challenges-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .challenge-item {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid var(--orange);
+        }
+
+        .challenge-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .challenge-text {
+            color: var(--text-body);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        .challenge-text strong {
+            color: var(--navy);
+        }
+
+        /* ===== FAQ SECTION ===== */
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--gray-50);
+            transition: background 0.3s ease;
+            user-select: none;
+        }
+
+        .faq-question:hover {
+            background: var(--gray-100);
+        }
+
+        .faq-question span:first-child {
+            font-weight: 600;
+            color: var(--navy);
+            font-size: 1rem;
+        }
+
+        .faq-toggle {
+            color: var(--orange);
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+
+        .faq-content {
+            padding: 20px;
+            color: var(--text-body);
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .faq-content strong {
+            color: var(--navy);
+        }
+
+        .faq-content a {
+            color: var(--orange);
+            text-decoration: none;
+        }
+
+        .faq-content a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== FINAL CTA ===== */
+        .final-cta {
+            background: linear-gradient(135deg, var(--orange) 0%, var(--orange-hover) 100%);
+            color: var(--white);
+            padding: 60px;
+            border-radius: 16px;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            color: var(--white);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .final-cta p {
+            font-size: 1.1rem;
+            margin-bottom: 35px;
+            line-height: 1.8;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .final-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .final-btn {
+            display: inline-block;
+            padding: 14px 35px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .final-btn.primary {
+            background: var(--white);
+            color: var(--orange);
+        }
+
+        .final-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255,255,255,0.3);
+        }
+
+        .final-btn.secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .final-btn.secondary:hover {
+            background: var(--white);
+            color: var(--orange);
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 1200px) {
+            .location-card.featured {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .challenges-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .top-bar .container {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .top-bar-right {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .header .container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .main-nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+                box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+                z-index: 99;
+            }
+
+            .main-nav.active {
+                display: flex;
+            }
+
+            .mobile-toggle {
+                display: flex;
+            }
+
+            .header-phone {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .mobile-cta-bar {
+                display: block;
+            }
+
+            section {
+                padding: 80px 15px;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .hero {
+                padding: 100px 20px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .uncertainty-cta,
+            .final-cta {
+                padding: 35px 20px;
+            }
+
+            .uncertainty-cta h3,
+            .final-cta h2 {
+                font-size: 1.6rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .location-card {
+                padding: 20px;
+            }
+
+            .location-card.featured {
+                padding: 25px;
+            }
+
+            table {
+                font-size: 0.85rem;
+            }
+
+            table th,
+            table td {
+                padding: 12px;
+            }
+
+            .map-wrapper {
+                height: 350px;
+            }
+
+            .response-times {
+                grid-template-columns: 1fr;
+            }
+
+            .service-tags {
+                gap: 6px;
+            }
+
+            .service-tag {
+                font-size: 0.75rem;
+                padding: 5px 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .top-bar {
+                font-size: 0.75rem;
+            }
+
+            .top-bar-right {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .logo {
+                height: 40px;
+            }
+
+            .main-nav {
+                gap: 10px;
+            }
+
+            .main-nav a {
+                font-size: 0.7rem;
+            }
+
+            .header-phone {
+                font-size: 0.8rem;
+                padding: 8px 12px;
+            }
+
+            .sub-header {
+                font-size: 0.8rem;
+            }
+
+            .hero {
+                padding: 60px 15px;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .trust-badges {
+                gap: 15px;
+            }
+
+            .badge-number {
+                font-size: 1.4rem;
+            }
+
+            .badge-label {
+                font-size: 0.7rem;
+            }
+
+            .location-card {
+                padding: 15px;
+            }
+
+            .locations-grid {
+                gap: 20px;
+            }
+
+            .location-card h3 {
+                font-size: 1.2rem;
+            }
+
+            .uncertainty-buttons,
+            .final-buttons {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .uncertainty-button,
+            .final-btn {
+                width: 100%;
+            }
+
+            .faq-question {
+                padding: 15px;
+            }
+
+            .faq-question span:first-child {
+                font-size: 0.9rem;
+            }
+
+            .regional-challenges {
+                padding: 20px;
+            }
+
+            .mobile-cta-bar {
+                padding: 10px 15px;
+            }
+
+            .mobile-cta-bar a {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+
+    <!-- JSON-LD Structured Data - LocalBusiness Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "LocalBusiness",
+      "name": "Bang For Ya Buck",
+      "description": "Pest control, carpet cleaning, and flood restoration services across New England NSW.",
+      "telephone": "02 5765 0065",
+      "email": "admin@bangforyabuck.com.au",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Armidale",
+        "addressRegion": "NSW",
+        "addressCountry": "AU"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Armidale"
+        },
+        {
+          "@type": "City",
+          "name": "Uralla"
+        },
+        {
+          "@type": "City",
+          "name": "Guyra"
+        },
+        {
+          "@type": "City",
+          "name": "Walcha"
+        },
+        {
+          "@type": "City",
+          "name": "Glen Innes"
+        },
+        {
+          "@type": "City",
+          "name": "Black Mountain"
+        },
+        {
+          "@type": "City",
+          "name": "Hillgrove"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "10"
+      },
+      "url": "https://bangforyabuck.com.au/locations"
+    }
+    </script>
+    <!-- Google Analytics 4 - Replace GA_MEASUREMENT_ID with your actual ID -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    -->
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Do you service my suburb or postcode?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We service all areas listed on our locations page (Armidale, Uralla, Guyra, Walcha, Glen Innes, Black Mountain, and Hillgrove). However, if your area isn't listed, don't assume we can't help! We regularly expand our coverage and often service properties in surrounding areas. Call us on 02 5765 0065 to confirm service availability for your specific address."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What's the difference between same-day, next-day, and scheduled service?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Same-Day Service: We'll visit your property on the same day you call (where possible), typically within 2-3 hours of your request. Next-Day Service: We'll schedule a visit for the following business day after your call. Scheduled Service: Certain areas are serviced on set days (e.g., Walcha on Tuesdays & Thursdays). We'll schedule your service for the next available scheduled day. Emergency calls are accommodated where possible."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I book a service for a location outside of Armidale?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Simply use our online quote form to describe your service needs and provide your address. Alternatively, call us on 02 5765 0065 and we'll discuss your requirements and confirm availability. We'll let you know the expected timeframe for your service and any scheduling details specific to your location."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is there an additional charge for traveling to distant locations?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We offer transparent pricing across all our service areas. While we may include a travel component in quotes for locations further from Armidale, our pricing is competitive and reflects the true cost of service. We'll provide a detailed quote upfront so there are no surprises. See our Pricing page for more details."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What if I have an emergency outside of standard hours?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We understand that pest emergencies, flooding, and other property crises don't follow business hours. Call us on 02 5765 0065 and our team will advise on emergency availability. While same-day response may not always be possible for distant locations at night, we'll do everything we can to prioritize urgent situations and provide advice until we can attend."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can you service rural properties or acreage outside town boundaries?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes! We service rural properties and acreage throughout the New England region. Rural pest control, termite inspections, and flood restoration are all services we regularly provide for farms and rural residential properties. Call us with your address and we'll confirm coverage. Some rural locations may be scheduled based on our routing efficiency, but we're experienced with property types across the entire region."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do you offer pest control in all Armidale suburbs?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, we cover all Armidale suburbs including Central, East, West, South Armidale, UNE Campus, and Dumaresq. Same-day service guaranteed. Link to locations/armidale.html."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What services are available in Walcha and Glen Innes?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Pest control, pre-purchase and termite inspections on scheduled days (Tue/Thu for Walcha, Mon/Wed for Glen Innes). Links to locations/walcha.html and locations/glen-innes.html."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- TOP BAR -->
+    <div class="top-bar" role="banner">
+        <div class="container">
+            <div class="top-bar-left">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+                <span>Proudly Supporting Local Communities</span>
+            </div>
+            <div class="top-bar-right">
+                <a href="locations.html">Local Offices</a>
+                <a href="quote.html">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header" role="navigation">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/Blue Yellow Modern Creative Initial Font Logo - 1.png" alt="BFYB Logo" class="logo-img">
+            </a>
+            <nav class="main-nav" id="mainNav">
+                <a href="pest-control.html">Pest Control</a>
+                <a href="carpet-cleaning.html">Carpet Cleaning</a>
+                <a href="flood-restoration.html">Flood Restoration</a>
+                <a href="pre-purchase.html">Pre-Purchase</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="quote.html">Request a Quote</a>
+                <a href="locations.html" class="active">Locations</a>
+                <a href="blog/">Blog</a>
+            </nav>
+            <a href="tel:0257650065" class="header-phone">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                02 5765 0065
+            </a>
+            <div class="mobile-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- SUB-HEADER -->
+    <div class="sub-header">
+        <div class="container">
+            <strong>A Better Home Company</strong> — Protect Yourself Today! &nbsp;
+            <a href="tel:0257650065">
+                <svg style="vertical-align:middle;margin-right:4px" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                02 5765 0065
+            </a>
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="main-content" style="background: linear-gradient(135deg, rgba(15, 27, 51, 0.82) 0%, rgba(10, 18, 37, 0.78) 100%), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center center;">
+        <div class="hero-content">
+            <h1>Service Locations Across the New England Region</h1>
+            <p>From Armidale to Glen Innes, we're your local pest control, carpet cleaning, and flood restoration experts. Same-day service in Armidale, rapid response across Northern NSW.</p>
+            <div class="trust-badges">
+                <div class="badge">
+                    <div class="badge-number">7</div>
+                    <div class="badge-label">Service Areas</div>
+                </div>
+                <div class="badge">
+                    <div class="badge-number">15+</div>
+                    <div class="badge-label">Years Local</div>
+                </div>
+                <div class="badge">
+                    <div class="badge-number">2hrs</div>
+                    <div class="badge-label">Avg Response</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICE AREA OVERVIEW WITH MAP VISUALIZATION -->
+    <section>
+        <div class="section-container">
+            <h2 class="section-title scroll-animate">Our Service Coverage Map</h2>
+            <p class="subtitle scroll-animate">Rapid response across the New England Region</p>
+
+            <div class="map-visualization scroll-animate">
+                <div class="map-wrapper">
+                    <div class="map-center-dot">📍</div>
+
+                    <!-- Armidale (Center) -->
+                    <div class="map-location-pin" style="top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                        <div class="location-pin-marker">HQ</div>
+                        <div class="map-location-label">Armidale</div>
+                        <div class="map-location-distance">Headquarters</div>
+                    </div>
+
+                    <!-- Uralla (15 min) -->
+                    <div class="map-location-pin" style="top: 35%; left: 55%;">
+                        <div class="location-pin-marker">📍</div>
+                        <div class="map-location-label">Uralla</div>
+                        <div class="map-location-distance">15 min</div>
+                    </div>
+
+                    <!-- Black Mountain (20 min) -->
+                    <div class="map-location-pin" style="top: 60%; left: 48%;">
+                        <div class="location-pin-marker">📍</div>
+                        <div class="map-location-label">Black Mtn</div>
+                        <div class="map-location-distance">20 min</div>
+                    </div>
+
+                    <!-- Hillgrove (25 min) -->
+                    <div class="map-location-pin" style="top: 45%; left: 35%;">
+                        <div class="location-pin-marker">📍</div>
+                        <div class="map-location-label">Hillgrove</div>
+                        <div class="map-location-distance">25 min</div>
+                    </div>
+
+                    <!-- Guyra (35 min) -->
+                    <div class="map-location-pin" style="top: 25%; left: 65%;">
+                        <div class="location-pin-marker">📍</div>
+                        <div class="map-location-label">Guyra</div>
+                        <div class="map-location-distance">35 min</div>
+                    </div>
+
+                    <!-- Walcha (50 min) -->
+                    <div class="map-location-pin" style="top: 70%; left: 30%;">
+                        <div class="location-pin-marker">📍</div>
+                        <div class="map-location-label">Walcha</div>
+                        <div class="map-location-distance">50 min</div>
+                    </div>
+
+                    <!-- Glen Innes (1 hour) -->
+                    <div class="map-location-pin" style="top: 15%; left: 75%;">
+                        <div class="location-pin-marker">📍</div>
+                        <div class="map-location-label">Glen Innes</div>
+                        <div class="map-location-distance">1 hr</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATION CARDS SECTION -->
+    <section style="background: linear-gradient(180deg, var(--white) 0%, var(--gray-50) 100%);">
+        <div class="section-container">
+            <h2 class="section-title scroll-animate">Detailed Location Coverage</h2>
+
+            <div class="locations-grid">
+                <!-- FEATURED ARMIDALE -->
+                <div class="location-card featured scroll-animate animation-delay-1">
+                    <div class="featured-left">
+                        <div class="featured-badge">Headquarters & Hub</div>
+                        <h3>Armidale</h3>
+                        <p class="distance">Main Service Centre</p>
+                        <p style="font-size: 1rem; color: var(--gray-200); line-height: 1.7;">Our home base and the heart of our operations, offering the fastest response times and comprehensive service coverage across the region.</p>
+                        <div class="location-info">
+                            <div style="font-weight: 700; color: var(--white); margin-bottom: 15px;">Service Hub</div>
+                            <div style="color: var(--gray-200); font-size: 0.95rem; line-height: 1.6;">
+                                <strong>Population:</strong> ~25,000<br>
+                                <strong>Service Level:</strong> Same-day guaranteed<br>
+                                <strong>Coverage Zones:</strong> Central, East, West, South Armidale + UNE Campus + Dumaresq
+                            </div>
+                        </div>
+                        <div style="color: var(--green-bg); font-weight: 700; margin-top: 20px; font-size: 1rem;">Fastest Response Times</div>
+                    </div>
+
+                    <div class="featured-right">
+                        <div style="background: rgba(255, 255, 255, 0.1); border-radius: 10px; padding: 25px; border: 1px solid rgba(255, 255, 255, 0.2);">
+                            <div style="color: var(--white); font-weight: 700; font-size: 1rem; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px;">All Services Available</div>
+                            <ul class="service-list-featured">
+                                <li>Pest Control</li>
+                                <li>Carpet Cleaning</li>
+                                <li>Flood Restoration</li>
+                                <li>Pre-Purchase Inspection</li>
+                                <li>Termite Inspection</li>
+                            </ul>
+                        </div>
+                        <a href="quote.html" class="cta-button" style="width: 100%; text-align: center;">Get Quote for Armidale</a>
+                    </div>
+                </div>
+
+                <!-- URALLA -->
+                <div class="location-card scroll-animate animation-delay-2">
+                    <div class="location-icon">📍</div>
+                    <h3>Uralla</h3>
+                    <p class="distance">15 min from Armidale</p>
+                    <div class="location-info">
+                        <div class="population">Population: ~2,500</div>
+                        <div style="margin: 12px 0; color: var(--gray-600); line-height: 1.6;"><strong>Coverage:</strong> Uralla township, Kentucky, Invergowrie</div>
+                    </div>
+                    <div class="service-level same-day">Same-Day Available</div>
+                    <div class="service-tags">
+                        <span class="service-tag">Pest Control</span>
+                        <span class="service-tag">Carpet Cleaning</span>
+                        <span class="service-tag">Flood Restoration</span>
+                        <span class="service-tag">Pre-Purchase</span>
+                        <span class="service-tag">Termite</span>
+                    </div>
+                    <p class="tagline">"Full service area with rapid response"</p>
+                    <a href="quote.html" class="cta-button">Get Quote for Uralla</a>
+                </div>
+
+                <!-- GUYRA -->
+                <div class="location-card scroll-animate animation-delay-3">
+                    <div class="location-icon">📍</div>
+                    <h3>Guyra</h3>
+                    <p class="distance">35 min from Armidale</p>
+                    <div class="location-info">
+                        <div class="population">Population: ~2,000</div>
+                        <div style="margin: 12px 0; color: var(--gray-600); line-height: 1.6;"><strong>Coverage:</strong> Guyra township, Ben Lomond, Llangothlin</div>
+                    </div>
+                    <div class="service-level next-day">Next-Day Standard, Same-Day Available</div>
+                    <div class="service-tags">
+                        <span class="service-tag">Pest Control</span>
+                        <span class="service-tag">Carpet Cleaning</span>
+                        <span class="service-tag">Flood Restoration</span>
+                        <span class="service-tag">Pre-Purchase</span>
+                        <span class="service-tag">Termite</span>
+                    </div>
+                    <p class="tagline">"Full service with flexible scheduling"</p>
+                    <a href="quote.html" class="cta-button">Get Quote for Guyra</a>
+                </div>
+
+                <!-- WALCHA -->
+                <div class="location-card scroll-animate animation-delay-4">
+                    <div class="location-icon">📍</div>
+                    <h3>Walcha</h3>
+                    <p class="distance">50 min from Armidale</p>
+                    <div class="location-info">
+                        <div class="population">Population: ~1,600</div>
+                        <div style="margin: 12px 0; color: var(--gray-600); line-height: 1.6;"><strong>Coverage:</strong> Walcha township, Nowendoc, Woolbrook</div>
+                    </div>
+                    <div class="service-level scheduled">Scheduled (Tue & Thu)</div>
+                    <div class="service-tags">
+                        <span class="service-tag">Pest Control</span>
+                        <span class="service-tag">Pre-Purchase</span>
+                        <span class="service-tag">Termite</span>
+                    </div>
+                    <p class="tagline">"Scheduled service days for efficiency"</p>
+                    <a href="quote.html" class="cta-button">Get Quote for Walcha</a>
+                </div>
+
+                <!-- GLEN INNES -->
+                <div class="location-card scroll-animate animation-delay-5">
+                    <div class="location-icon">📍</div>
+                    <h3>Glen Innes</h3>
+                    <p class="distance">1 hour from Armidale</p>
+                    <div class="location-info">
+                        <div class="population">Population: ~6,000</div>
+                        <div style="margin: 12px 0; color: var(--gray-600); line-height: 1.6;"><strong>Coverage:</strong> Glen Innes, Deepwater, Emmaville</div>
+                    </div>
+                    <div class="service-level scheduled">Scheduled (Mon & Wed)</div>
+                    <div class="service-tags">
+                        <span class="service-tag">Pest Control</span>
+                        <span class="service-tag">Pre-Purchase</span>
+                        <span class="service-tag">Termite</span>
+                    </div>
+                    <p class="tagline">"Largest secondary service centre"</p>
+                    <a href="quote.html" class="cta-button">Get Quote for Glen Innes</a>
+                </div>
+
+                <!-- BLACK MOUNTAIN -->
+                <div class="location-card scroll-animate animation-delay-6">
+                    <div class="location-icon">📍</div>
+                    <h3>Black Mountain</h3>
+                    <p class="distance">20 min from Armidale</p>
+                    <div class="location-info">
+                        <div class="population">Close to Armidale</div>
+                        <div style="margin: 12px 0; color: var(--gray-600); line-height: 1.6;"><strong>Coverage:</strong> Black Mountain township and surrounding areas</div>
+                    </div>
+                    <div class="service-level same-day">Same-Day Available</div>
+                    <div class="service-tags">
+                        <span class="service-tag">Pest Control</span>
+                        <span class="service-tag">Carpet Cleaning</span>
+                        <span class="service-tag">Flood Restoration</span>
+                        <span class="service-tag">Pre-Purchase</span>
+                        <span class="service-tag">Termite</span>
+                    </div>
+                    <p class="tagline">"Quick response time from HQ"</p>
+                    <a href="quote.html" class="cta-button">Get Quote for Black Mountain</a>
+                </div>
+
+                <!-- HILLGROVE -->
+                <div class="location-card scroll-animate animation-delay-7">
+                    <div class="location-icon">📍</div>
+                    <h3>Hillgrove</h3>
+                    <p class="distance">25 min from Armidale</p>
+                    <div class="location-info">
+                        <div class="population">Close to Armidale</div>
+                        <div style="margin: 12px 0; color: var(--gray-600); line-height: 1.6;"><strong>Coverage:</strong> Hillgrove township and surrounding areas</div>
+                    </div>
+                    <div class="service-level same-day">Same-Day Available</div>
+                    <div class="service-tags">
+                        <span class="service-tag">Pest Control</span>
+                        <span class="service-tag">Carpet Cleaning</span>
+                        <span class="service-tag">Flood Restoration</span>
+                        <span class="service-tag">Pre-Purchase</span>
+                        <span class="service-tag">Termite</span>
+                    </div>
+                    <p class="tagline">"Full service with rapid deployment"</p>
+                    <a href="quote.html" class="cta-button">Get Quote for Hillgrove</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICE AVAILABILITY TABLE -->
+    <section>
+        <div class="section-container">
+            <h2 class="section-title scroll-animate">Services Available by Location</h2>
+            <p class="subtitle scroll-animate">Complete service matrix across all our coverage areas</p>
+
+            <div class="services-table-wrapper scroll-animate">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Location</th>
+                            <th>Pest Control</th>
+                            <th>Carpet Cleaning</th>
+                            <th>Flood Restoration</th>
+                            <th>Pre-Purchase Inspection</th>
+                            <th>Termite Inspection</th>
+                            <th>Response Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="location-name">Armidale</td>
+                            <td class="checkmark">✓</td>
+                            <td class="checkmark">✓</td>
+                            <td class="checkmark">✓</td>
+                            <td class="checkmark">✓</td>
+                            <td class="checkmark">✓</td>
+                            <td class="response-time">Same-Day</td>
+                        </tr>
+                        <tr>
+                            <td class="location-name">Uralla</td>
+                            <td class="checkmark">✓</td>
+                            <td class="checkmark">✓</td>
+                            <td class="checkmark">✓</td>
+                            <td class="checkmark">✓</td>
+                            <td class="checkmark">✓</td>
+                            <td class="response-time">Same-Day</td>
+                        </tr>
+                        <tr>
+                            <td class="location-name">Guyra</td>
+                            <td class="checkmark">✓</td>
+                            <td class="checkmark">✓</td>
+                            <td class="checkmark">✓</td>
+                            <td class="checkmark">✓</td>
+                            <td class="checkmark">✓</td>
+                            <td class="response-time">Next-Day</td>
+                        </tr>
+                        <tr>
+                            <td class="location-name">Walcha</td>
+                            <td class="checkmark">✓</td>
+                            <td>—</td>
+                            <td>—</td>
+                            <td class="checkmark">✓</td>
+                            <td class="checkmark">✓</td>
+                            <td class="response-time">Scheduled</td>
+                        </tr>
+                        <tr>
+                            <td class="location-name">Glen Innes</td>
+                            <td class="checkmark">✓</td>
+                            <td>—</td>
+                            <td>—</td>
+                            <td class="checkmark">✓</td>
+                            <td class="checkmark">✓</td>
+                            <td class="response-time">Scheduled</td>
+                        </tr>
+                        <tr>
+                            <td class="location-name">Black Mountain</td>
+                            <td class="checkmark">✓</td>
+                            <td class="checkmark">✓</td>
+                            <td class="checkmark">✓</td>
+                            <td class="checkmark">✓</td>
+                            <td class="checkmark">✓</td>
+                            <td class="response-time">Same-Day</td>
+                        </tr>
+                        <tr>
+                            <td class="location-name">Hillgrove</td>
+                            <td class="checkmark">✓</td>
+                            <td class="checkmark">✓</td>
+                            <td class="checkmark">✓</td>
+                            <td class="checkmark">✓</td>
+                            <td class="checkmark">✓</td>
+                            <td class="response-time">Same-Day</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESPONSE TIME GUARANTEES -->
+    <section style="background: var(--gray-50);">
+        <div class="section-container">
+            <h2 class="section-title scroll-animate">Response Time Guarantees</h2>
+            <p class="subtitle scroll-animate">Our commitment to rapid service across all locations</p>
+
+            <div class="response-times">
+                <div class="response-card scroll-animate animation-delay-1">
+                    <div class="response-location">Armidale</div>
+                    <div class="response-item">
+                        <div class="response-type">Emergency Response</div>
+                        <div class="response-time-value">Within 2 Hours</div>
+                        <div class="time-bar">
+                            <div class="time-bar-fill" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    <div class="response-item">
+                        <div class="response-type">Standard Service</div>
+                        <div class="response-time-value">Same Day</div>
+                        <div class="time-bar">
+                            <div class="time-bar-fill" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="response-card scroll-animate animation-delay-2">
+                    <div class="response-location">Uralla, Black Mtn, Hillgrove</div>
+                    <div class="response-item">
+                        <div class="response-type">Emergency Response</div>
+                        <div class="response-time-value">Within 3 Hours</div>
+                        <div class="time-bar">
+                            <div class="time-bar-fill" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="response-item">
+                        <div class="response-type">Standard Service</div>
+                        <div class="response-time-value">Same Day</div>
+                        <div class="time-bar">
+                            <div class="time-bar-fill" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="response-card scroll-animate animation-delay-3">
+                    <div class="response-location">Guyra</div>
+                    <div class="response-item">
+                        <div class="response-type">Emergency Response</div>
+                        <div class="response-time-value">Same Day</div>
+                        <div class="time-bar">
+                            <div class="time-bar-fill" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                    <div class="response-item">
+                        <div class="response-type">Standard Service</div>
+                        <div class="response-time-value">Next Day</div>
+                        <div class="time-bar">
+                            <div class="time-bar-fill" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="response-card scroll-animate animation-delay-4">
+                    <div class="response-location">Walcha, Glen Innes</div>
+                    <div class="response-item">
+                        <div class="response-type">Scheduled Service</div>
+                        <div class="response-time-value">Tue/Thu & Mon/Wed</div>
+                        <div class="time-bar">
+                            <div class="time-bar-fill" style="width: 60%;"></div>
+                        </div>
+                    </div>
+                    <div class="response-item">
+                        <div class="response-type">Emergency Available</div>
+                        <div class="response-time-value">Same Day</div>
+                        <div class="time-bar">
+                            <div class="time-bar-fill" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOT SURE SECTION -->
+    <section>
+        <div class="section-container">
+            <div class="uncertainty-cta scroll-animate">
+                <h3>Not Sure If We Service Your Area?</h3>
+                <p>We're constantly expanding our coverage across the New England Region. If your suburb or property isn't listed above, don't worry – call us and we'll let you know exactly what we can do for you.</p>
+                <div class="uncertainty-buttons">
+                    <a href="tel:0257650065" class="uncertainty-button primary">Call Now: 02 5765 0065</a>
+                    <a href="quote.html" class="uncertainty-button secondary">Get a Free Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCAL KNOWLEDGE SECTION -->
+    <section>
+        <div class="section-container">
+            <div class="local-knowledge scroll-animate">
+                <h3>Local Expertise, Regional Knowledge</h3>
+                <p>We know the New England region inside and out. As an Armidale-based business with over 15 years of local experience, we understand the unique environmental, climate, and pest challenges that affect properties across Northern NSW. This deep local knowledge directly translates to better protection and more effective solutions for your property.</p>
+
+                <div class="regional-challenges">
+                    <div class="challenges-title">The New England Environment & Our Expertise</div>
+                    <div class="challenges-list">
+                        <div class="challenge-item">
+                            <div class="challenge-icon">🪲</div>
+                            <div class="challenge-text"><strong>Termite Risk Zones:</strong> Our red-soil altitudes create prime termite conditions. We specialize in detecting and treating subterranean termite colonies common to this elevation.</div>
+                        </div>
+                        <div class="challenge-item">
+                            <div class="challenge-icon">🦟</div>
+                            <div class="challenge-text"><strong>Seasonal Pest Patterns:</strong> New England's cool winters and distinct seasons bring unique pest migration and breeding patterns that we've learned to anticipate and manage.</div>
+                        </div>
+                        <div class="challenge-item">
+                            <div class="challenge-icon">💧</div>
+                            <div class="challenge-text"><strong>Flood & Moisture:</strong> Higher altitude rainfall and drainage patterns mean flood restoration and moisture control are critical services in our region.</div>
+                        </div>
+                        <div class="challenge-item">
+                            <div class="challenge-icon">🏡</div>
+                            <div class="challenge-text"><strong>Property Types:</strong> From heritage properties to modern builds, rural properties to suburban homes – we understand every property type in the region.</div>
+                        </div>
+                        <div class="challenge-item">
+                            <div class="challenge-icon">🌡️</div>
+                            <div class="challenge-text"><strong>Climate Adaptation:</strong> Temperature variations and altitude effects on pest behavior mean our solutions are specifically tailored to New England conditions.</div>
+                        </div>
+                        <div class="challenge-item">
+                            <div class="challenge-icon">👥</div>
+                            <div class="challenge-text"><strong>Community Connection:</strong> We're part of this community. Your neighbors are our clients, and your trust is what keeps us going.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section style="background: var(--gray-50);">
+        <div class="section-container">
+            <h2 class="section-title scroll-animate">Frequently Asked Questions</h2>
+            <p class="subtitle scroll-animate">Everything you need to know about our service areas and coverage</p>
+
+            <div class="faq-container">
+                <div class="faq-item scroll-animate animation-delay-1">
+                    <div class="faq-question">
+                        <span>Do you service my suburb or postcode?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-content">
+                            We service all areas listed on our locations page (Armidale, Uralla, Guyra, Walcha, Glen Innes, Black Mountain, and Hillgrove). However, if your area isn't listed, don't assume we can't help! We regularly expand our coverage and often service properties in surrounding areas. Call us on <strong>02 5765 0065</strong> to confirm service availability for your specific address.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item scroll-animate animation-delay-2">
+                    <div class="faq-question">
+                        <span>What's the difference between same-day, next-day, and scheduled service?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-content">
+                            <strong>Same-Day Service:</strong> We'll visit your property on the same day you call (where possible), typically within 2-3 hours of your request.<br><br>
+                            <strong>Next-Day Service:</strong> We'll schedule a visit for the following business day after your call.<br><br>
+                            <strong>Scheduled Service:</strong> Certain areas are serviced on set days (e.g., Walcha on Tuesdays & Thursdays). We'll schedule your service for the next available scheduled day. Emergency calls are accommodated where possible.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item scroll-animate animation-delay-3">
+                    <div class="faq-question">
+                        <span>How do I book a service for a location outside of Armidale?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-content">
+                            Simply use our online quote form to describe your service needs and provide your address. Alternatively, call us on <strong>02 5765 0065</strong> and we'll discuss your requirements and confirm availability. We'll let you know the expected timeframe for your service and any scheduling details specific to your location.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item scroll-animate animation-delay-4">
+                    <div class="faq-question">
+                        <span>Is there an additional charge for traveling to distant locations?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-content">
+                            We offer transparent pricing across all our service areas. While we may include a travel component in quotes for locations further from Armidale, our pricing is competitive and reflects the true cost of service. We'll provide a detailed quote upfront so there are no surprises. See our <strong><a href="pricing.html">Pricing page</a></strong> for more details.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item scroll-animate animation-delay-5">
+                    <div class="faq-question">
+                        <span>What if I have an emergency outside of standard hours?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-content">
+                            We understand that pest emergencies, flooding, and other property crises don't follow business hours. Call us on <strong>02 5765 0065</strong> and our team will advise on emergency availability. While same-day response may not always be possible for distant locations at night, we'll do everything we can to prioritize urgent situations and provide advice until we can attend.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item scroll-animate animation-delay-6">
+                    <div class="faq-question">
+                        <span>Can you service rural properties or acreage outside town boundaries?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-content">
+                            Yes! We service rural properties and acreage throughout the New England region. Rural pest control, termite inspections, and flood restoration are all services we regularly provide for farms and rural residential properties. Call us with your address and we'll confirm coverage. Some rural locations may be scheduled based on our routing efficiency, but we're experienced with property types across the entire region.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item scroll-animate animation-delay-7">
+                    <div class="faq-question">
+                        <span>Do you offer pest control in all Armidale suburbs?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-content">
+                            Yes, we cover all Armidale suburbs including Central, East, West, South Armidale, UNE Campus, and Dumaresq. Same-day service guaranteed. <a href="locations/armidale.html">View Armidale service area</a>.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item scroll-animate animation-delay-8">
+                    <div class="faq-question">
+                        <span>What services are available in Walcha and Glen Innes?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-content">
+                            Pest control, pre-purchase and termite inspections on scheduled days (Tue/Thu for Walcha, Mon/Wed for Glen Innes). <a href="locations/walcha.html">View Walcha service details</a> and <a href="locations/glen-innes.html">Glen Innes service details</a>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA SECTION -->
+    <section>
+        <div class="section-container">
+            <div class="final-cta scroll-animate">
+                <h2>Need Service in the New England Region?</h2>
+                <p>Whatever your pest control, cleaning, or restoration needs – we're ready to help. Whether you're in Armidale or anywhere across Northern NSW, contact us today for a free quote or expert advice.</p>
+                <div class="final-buttons">
+                    <a href="quote.html" class="final-btn primary">Get Free Quote</a>
+                    <a href="tel:0257650065" class="final-btn secondary">Call: 02 5765 0065</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="images/Blue Yellow Modern Creative Initial Font Logo - 1.png" alt="BFYB Logo" class="footer-logo-img" loading="lazy">
+                    <p>Professional Pest Control, Carpet Cleaning & Flood Restoration services in Armidale and the New England Region. Locally owned and operated, proudly serving our community for over 15 years.</p>
+                </div>
+                <div>
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="pest-control.html">Pest Control</a></li>
+                        <li><a href="carpet-cleaning.html">Carpet Cleaning</a></li>
+                        <li><a href="flood-restoration.html">Flood Restoration</a></li>
+                        <li><a href="pre-purchase.html">Pre-Purchase Reports</a></li>
+                        <li><a href="blog/">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Service Areas</h4>
+                    <ul>
+                        <li><a href="locations/armidale.html">Armidale</a></li>
+                        <li><a href="locations/uralla.html">Uralla</a></li>
+                        <li><a href="locations/guyra.html">Guyra</a></li>
+                        <li><a href="locations/black-mountain.html">Black Mountain</a></li>
+                        <li><a href="locations/walcha.html">Walcha</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <div class="footer-contact-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        <a href="tel:0421470028">0421 470 028</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <a href="mailto:admin@bangforyabuck.com.au">admin@bangforyabuck.com.au</a>
+                    </div>
+                    <div class="footer-hours">
+                        <strong>Service Hours</strong>
+                        <p>Mon-Fri: 7am – 6pm</p>
+                    </div>
+                    <div class="footer-hours">
+                        <strong>Office Hours</strong>
+                        <p>Mon-Fri: 8am – 5pm</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">&copy; 2026 Bang For Ya Buck. All rights reserved. ABN: XXXXXXXX | Pest Control Licence: XXXXXXXX | <a href="privacy-policy.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">Privacy Policy</a> | <a href="terms.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">Terms of Service</a></div>
+        </div>
+    </footer>
+
+    <!-- MOBILE CTA BAR -->
+    <div class="mobile-cta-bar">
+        <a href="tel:0257650065">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            Call Now - 02 5765 0065
+        </a>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mainNav = document.getElementById('mainNav');
+
+        mobileToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.main-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                mainNav.classList.remove('active');
+            });
+        });
+
+        // Scroll Animation Observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-animate').forEach(el => {
+            observer.observe(el);
+        });
+
+        // FAQ Toggle Functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.closest('.faq-item');
+                const isActive = faqItem.classList.contains('active');
+
+                // Close all other FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+
+                // Open clicked item if it wasn't already open
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+
+        // Header scroll effect
+        let lastScrollTop = 0;
+        const header = document.querySelector('.header');
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > 100) {
+                header.style.boxShadow = '0 4px 15px rgba(0,0,0,0.1)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+
+        // Smooth scroll for links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
