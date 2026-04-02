@@ -163,8 +163,7 @@
                         url('images/41d699e8-7fd9-42df-a23b-aeda78742e30.png');
             background-size: cover;
             background-position: center center;
-            padding: 90px 0 110px;
-            padding-bottom: 60px;
+            padding: 90px 0 80px;
             margin-bottom: 0;
             position: relative;
             overflow: hidden;
@@ -1251,16 +1250,18 @@
         </div>
     </section>
 
-    <!-- Orange Wave Divider -->
-    <div style="position: relative; margin-top: -1px; z-index: 3; line-height: 0;">
-        <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="display: block; width: 100%; height: 80px;">
-            <path d="M0,0 C360,80 1080,0 1440,60 L1440,80 L0,80 Z" fill="#f37021"/>
+    <!-- Wave Divider: hero navy into orange into white -->
+    <div style="position: relative; z-index: 3; line-height: 0; margin-top: -1px; background: var(--white);">
+        <svg viewBox="0 0 1440 150" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="display: block; width: 100%; height: 150px;">
+            <!-- Navy fill matching hero background -->
+            <path d="M0,0 L1440,0 L1440,60 C1080,120 360,20 0,90 Z" fill="#0a1225"/>
+            <!-- Orange wave on top -->
+            <path d="M0,75 C360,5 1080,110 1440,45 L1440,55 C1080,120 360,15 0,85 Z" fill="#f37021"/>
         </svg>
     </div>
-    <div style="background: #f37021; height: 8px; margin-top: -1px; line-height: 0;"></div>
 
     <!-- Why Choose BFYB -->
-    <section class="why-choose section-padding" id="why-choose" aria-label="Why choose Bang For Ya Buck" style="background: var(--white); margin-top: -1px;">
+    <section class="why-choose section-padding" id="why-choose" aria-label="Why choose Bang For Ya Buck" style="background: var(--white);">
         <div class="container">
             <div class="animate-on-scroll">
                 <div class="section-label">About Us</div>
