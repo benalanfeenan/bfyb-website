@@ -1080,11 +1080,11 @@
         }
 
         @media (max-width: 768px) {
-            .why-choose h2 { font-size: 2.2rem; }
-            .why-choose-features { grid-template-columns: 1fr; }
+            .why-choose h2 { font-size: 2rem; }
+            .why-choose-features { grid-template-columns: 1fr 1fr; }
             .method-list { grid-template-columns: 1fr; }
-            .hero h1 { font-size: 2.2rem; }
-            .hero .container { gap: 40px; }
+            .hero h1 { font-size: 2rem; }
+            .hero .container { gap: 30px; }
             .stats-grid { grid-template-columns: repeat(2, 1fr); }
             .stat-item:not(:last-child)::after { display: none; }
             .services-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
@@ -1092,23 +1092,41 @@
             .industries-grid { grid-template-columns: repeat(3, 1fr); }
             .footer-grid { grid-template-columns: 1fr; }
             .cta-buttons { flex-direction: column; align-items: center; }
-            .section-padding { padding: 60px 0; }
+            .section-padding { padding: 50px 0; }
             .form-row { grid-template-columns: 1fr; }
             .hero-buttons { flex-direction: column; }
-            .hero-trust-points { gap: 12px; }
+            .hero-trust-points { gap: 10px; }
+            .hero-trust-item { font-size: 0.85rem; }
+            .why-choose-text-col { padding: 28px 24px; }
+            .why-choose-text { font-size: 0.95rem; margin-bottom: 14px; }
+            .section-header h2, .section-title { font-size: 1.8rem; }
+            .section-desc { font-size: 0.9rem; }
+            .quote-form-card { padding: 24px 20px; }
+            .quote-form-card h3 { font-size: 1.3rem; }
         }
 
         @media (max-width: 480px) {
-            .hero h1 { font-size: 1.8rem; }
-            .stat-number { font-size: 2.4rem; }
+            .hero h1 { font-size: 1.6rem; }
+            .hero { padding: 60px 0 50px; }
+            .hero-badge { font-size: 0.72rem; padding: 6px 12px; }
+            .hero-description { font-size: 0.9rem; }
+            .stat-number { font-size: 2rem; }
             .industries-grid { grid-template-columns: repeat(2, 1fr); }
-            .locations-tags { gap: 10px; }
-            .location-tag { padding: 10px 18px; font-size: 0.9rem; }
+            .locations-tags { gap: 8px; }
+            .location-tag { padding: 8px 14px; font-size: 0.85rem; }
+            .why-choose h2 { font-size: 1.7rem; }
+            .why-choose-text-col { padding: 22px 18px; }
+            .why-choose-features { grid-template-columns: 1fr; }
+            .why-choose .feature-card { padding: 22px 18px; }
+            .method-item { padding: 12px 14px; font-size: 0.85rem; }
+            .section-padding { padding: 40px 0; }
+            .container { padding: 0 14px; }
+            .btn-orange, .btn-call, .btn-white { padding: 12px 20px; font-size: 0.9rem; width: 100%; justify-content: center; }
         }
 
         /* Sticky mobile CTA bar - page specific */
         @media (max-width: 768px) {
-            body { padding-bottom: 80px; }
+            body { padding-bottom: 48px; }
         }
 
         /* FAQ Section Styles */

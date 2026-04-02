@@ -1233,20 +1233,34 @@ h1, h2, h3, h4, h5, h6 {
     bottom: 0;
     left: 0;
     right: 0;
-    background: var(--green-bg);
-    padding: 14px 20px;
     z-index: 999;
-    text-align: center;
     box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+}
+.mobile-cta-bar .cta-inner {
+    display: flex;
 }
 .mobile-cta-bar a {
     color: var(--white);
-    font-weight: 800;
-    font-size: 1.1rem;
+    font-weight: 700;
+    font-size: 0.85rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 6px;
+    padding: 12px 10px;
+    text-decoration: none;
+    flex: 1;
+    white-space: nowrap;
+    text-align: center;
+}
+.mobile-cta-bar .cta-call {
+    background: #16a34a;
+}
+.mobile-cta-bar .cta-quote {
+    background: var(--orange);
+}
+.mobile-cta-bar a svg {
+    flex-shrink: 0;
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
@@ -1317,7 +1331,7 @@ h1, h2, h3, h4, h5, h6 {
     .top-bar-right { gap: 16px; }
 
     .mobile-cta-bar { display: block; }
-    body { padding-bottom: 60px; }
+    body { padding-bottom: 48px; }
 
     .google-review-badge { margin-top: 20px; }
     .faq-question { font-size: 0.95rem; padding: 16px 20px; }
